@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactChildren</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<script type="text/jsx">
+    var DemoComponent=React.createClass({
+        render:function(){
+            return(
+              <div>
+                  <h2>{this.props.heading}</h2>
+                  <p>{this.props.children}</p>
+              </div>
+            );
+        }
+    })
+    React.render(
+            <div>
+                <DemoComponent heading="Heading1" >This is the paragraph#1</DemoComponent>
+                <DemoComponent heading="Heading2">This is the paragraph#2</DemoComponent>
+                <DemoComponent heading="Heading3"><h1>Child is H1</h1></DemoComponent>
+            </div>,
+            document.getElementById('content'))
+</script>
+
+</body>
+</html>

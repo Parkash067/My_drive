@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="stylesheets/custom.css" rel="stylesheet" type="text/css">
+    <script src="javascripts/custom.js"></script>
+</head>
+<body>
+<h1 align="center">Create Your Portfolio</h1>
+<h2>Submit Your Details...</h2>
+
+<form action="/portfolio" method="get" onsubmit=" return validate()" >
+    <p><label>Your Name: </label> <input type="text" name="username" class="field" required></p>
+   <p><label> Objective: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="obj" class="field" required></p>
+      <p><label>About Yourself: </label><br><textarea name="about" cols="33" rows="4"  required id="about" oninput="validate1(id)"></textarea></p>
+      <p><label>Skills: </label><br><textarea name="skills" cols="33" rows="4"  required id="skills" oninput="validate1(id)" ></textarea></p>
+    <p><label>Your Location: </label><br><textarea name="location" cols="33" rows="4"  required ></textarea></p>
+     <p><label>Working Experience: </label><br><textarea name="exp" cols="33" rows="4"  required id="exp" ></textarea></p>
+    <p><label>Header color:</label> <input type="color" name="hcolor" required>
+        <label class="color">Section color:</label> <input type="color" name="scolor" required>
+        </p>
+     <input type="submit" value="CREATE" class="button">
+<br>
+    <p align="center"><small>Copyright pk</small></p>
+</form>
+</body>
+</html>

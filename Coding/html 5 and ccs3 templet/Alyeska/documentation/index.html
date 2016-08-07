@@ -1,0 +1,632 @@
+<!DOCTYPE WordPress PUBLIC "-//W3C//DTD WordPress 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Alyeska HTML Theme Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		#logo { background: url(assets/images/themeblvd.jpg) center top no-repeat; display: block; text-indent: -9999px; width: 400px; height: 154px; margin: 0 auto 20px auto; }
+		#logo:hover { background-position: 0 -154px; }
+		.container { width: 732px; }
+		h3 { padding-top: 1em; }
+		h4 { font-size: 15px; font-weight: bold;}
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		li { padding: 0 0 10px 0; }
+		li li { padding: 5px 0; list-style: circle; }
+		.caption { font-style: italic; font-size: 11px; }
+		.pretty { border: 1px solid #ccc; padding: 5px; }
+		pre { background: #f2f2f2; border: 1px solid #ccc; padding: 10px; width: 700px; }
+		code { background: #f2f2f2; border: 1px solid #ccc; padding: 10px; display: block; }
+		code p { margin: 0; }
+		.video { width: 533px; }
+		.video pre { width: inherit; }
+		.video iframe { border: 1px solid #ccc; padding: 5px; margin-bottom: 20px; }
+		.span-12 {width: 410px;}
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		$('a').click(function() {
+			var target = $(this).attr('href');
+			$('html,body').animate({ scrollTop: $(target).offset().top }, 'normal');
+			return false;
+		});
+	});
+
+	</script>
+	
+</head>
+
+
+<body>
+	<div class="container">
+		
+		<a href="http://www.themeblvd.com" title="ThemeBlvd.com" id="logo">ThemeBlvd</a>
+		
+		<h3 class="center alt">&ldquo;Alyeska HTML Theme&rdquo; Documentation by &ldquo;<a href="http://www.themeblvd.com" title="Theme Blvd">Theme Blvd</a>&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Alyeska HTML Theme&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: January 20, 2011<br>
+					By: Jason Bobich<br>
+					My Blog: <a href="http://www.jasonbobich.com">JasonBobich.com</a><br>
+                    Follow Me: <a href="http://www.twitter.com/jasonbobich">Twitter.com/jasonbobich</a> 
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/themeblvd">here</a>. And if you like the theme, please go to your Theme Forest downloads page and give this product a 5 star rating :-) Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol>
+			<li>General HTML Markup
+				<ul>
+					<li><a href="#markup-intro">Introduction</a></li>
+					<li><a href="#markup-home">Main Homepage</a></li>
+					<li><a href="#markup-page">2-Column Subpage</a></li>
+					<li><a href="#markup-fullwidth">Full-Width Subpage</a></li>
+					<li><a href="#markup-grid">CSS Grid System</a></li>
+				</ul>
+			</li>
+			<li>Customization
+				<ul>
+					<li><a href="#custom-intro">Introduction</a></li>
+					<li><a href="#custom-body">Body Shape and Style</a></li>
+					<li><a href="#custom-skin">Skin Color and Texture</a></li>
+					<li><a href="#custom-menu">Menu Color and Shape</a></li>
+					<li><a href="#custom-social">Contact and Social Networking Buttons</a></li>
+					<li><a href="#custom-search">Main Menu Search Bar</a></li>
+					<li><a href="#custom-fonts">Header Fonts</a></li>
+				</ul>
+			</li>
+			<li>Sliders
+				<ul>
+					<li><a href="#slider-cycle">Anything Slider</a></li>
+					<li><a href="#slider-piecemaker">Piecemaker (3D Cubes)</a></li>
+					<li><a href="#slider-accordion">Accordion</a></li>
+					<li><a href="#slider-nivo">Nivo</a></li>
+				</ul>
+			</li>
+			<li>File Structure
+				<ul>
+					<li><a href="#files-structure">General File Stucture</a></li>
+					<li><a href="#files-css">CSS Files</a></li>
+					<li><a href="#files-js">JS Files</a></li>
+					<li><a href="#files-flash">Flash Files</a></li>
+				</ul>
+			</li>
+			<li>Final Notes
+				<ul>
+					<li><a href="#fonts">PSD Fonts</a></li>
+					<li><a href="#credits">Sources and Credits</a></li>
+				</ul>
+			</li>
+			
+		</ol>
+		
+		<hr>
+		
+		<h2 class="alt">General HTML Markup</h2>
+		
+		<h3 id="markup-intro"><strong>Introduction</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Here you can get an idea of how the default HTML markup is constructed. It may seem a bit more complicated than many other themes with extra markup and some redundancies. However, this is all necessary in order to make theme as customizable as it and make sure those virtually endless amount of combinations work in as many browsers as possible. Think of it of like a 1,000-in-1 theme, and it'll make sense why there's so much HTML markup.</p>
+		
+		<p>I've done my best to try and keep this theme modern, while still allowing for people using older browsers to enjoy the awesomeness, as well. This theme uses valid HTML5 code and many CSS3 properties. However, this theme should be still (for the most part) compatible with IE7, IE8, Firefox 3+, Safari, Opera, and Chrome.</p>
+		
+		<p>In each of the document diagrams below, you will see red-dotted lines that separate your site-wide header and footers. This is meant to help you if you're looking to make the template more dynamic by putting it into a dreamweaver template, PHP script, etc.</p>
+		
+		<h3 id="markup-home"><strong>Main Homepage</strong> - <a href="#toc">top</a></h3>
+			
+		<p><img src="assets/images/markup-home.jpg" class="pretty" /></p>
+			
+		<hr>
+		
+		<h3 id="markup-page"><strong>2-Column Subpage</strong> - <a href="#toc">top</a></h3>
+		
+		<p><img src="assets/images/markup-page.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="markup-fullwidth"><strong>Full-Width Subpage</strong> - <a href="#toc">top</a></h3>
+		
+		<p><img src="assets/images/markup-fullwidth.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="markup-grid"><strong>CSS Grid System</strong> - <a href="#toc">top</a></h3>
+		
+		<p>With this theme, there are three different kinds of pages, you can use the built-in CSS grid system - homepage, standard 2-column page, and a standard full width page.</p>
+		
+		<p>Here are the classes available for use on your column DIV's:</p>
+		
+		<ul>
+			<li>one-half</li>
+			<li>one-third</li>
+			<li>two-third</li>
+			<li>one-fourth</li>
+			<li>three-fourth</li>
+		</ul>
+		
+		<p>Here's an example of how the grid can be put to work:</p>
+		
+		<p><img src="assets/images/grid.png" class="pretty" /></p>
+		
+		<hr>
+		
+		<h2 class="alt">Customization</h2>
+		
+		<h3 id="custom-intro"><strong>Introduction</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This themes comes packed with many possible layouts you could achieve. Following in this section of documentation, you will see how easy it is to change the major layout options of this theme with some simple changes to what CSS files are called and what classes are used.</p>
+		
+		<hr>
+		
+		<h3 id="custom-body"><strong>Body Shape and Style</strong> - <a href="#toc">top</a></h3>
+		
+		<p>For the body shape, you have two options - Stretch or Boxed?</p>
+		
+		<p align="center"><img src="assets/images/body-shape.jpg" class="pretty" /></p>
+		
+		<p>In the head of your HTML markup, you can enter in the value "stretch" or "boxed" as indicated in the image below.</p>
+		
+		<p><img src="assets/images/body-shape-code.jpg" class="pretty" /></p>
+		
+		<p>For the body style, you also have two options - Light or Dark?</p>
+		
+		<p align="center"><img src="assets/images/body-style.jpg" class="pretty" /></p>
+		
+		<p>In the head of your HTML markup, you can enter in the value "light" or "dark" as indicated in the image below.</p>
+		
+		<p><img src="assets/images/body-style-code.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="custom-skin"><strong>Skin Color and Texture</strong> - <a href="#toc">top</a></h3>
+		
+		<p>With this theme, you're given a total of 225 skins to choose from. Basically, there are 15 colors and 15 textures to choose from. Putting that together, there are 225 CSS files you could call for the skin of your site.</p>
+		
+		<p>15 Colors Values:</p>
+		
+		<ol>
+			<li>black</li>
+			<li>blue</li>
+			<li>brown</li>
+			<li>dark-purple</li>
+			<li>dark</li>
+			<li>green</li>
+			<li>light-blue</li>
+			<li>light</li>
+			<li>navy</li>
+			<li>orange</li>
+			<li>pink</li>
+			<li>purple</li>
+			<li>red</li>
+			<li>slate</li>
+			<li>teal</li>
+		</ol>
+		
+		<p>15 Texture Values:</p>
+		
+		<ol>
+			<li>bokeh</li>
+			<li>cracked</li>
+			<li>diag</li>
+			<li>diag2</li>
+			<li>dots</li>
+			<li>glass</li>
+			<li>glow</li>
+			<li>grid</li>
+			<li>grunge</li>
+			<li>horz</li>
+			<li>mosaic</li>
+			<li>splatter</li>
+			<li>vert</li>
+			<li>vintage</li>
+			<li>wood</li>
+		</ol>
+		
+		<p>So, for example, if you wanted to use the color "blue" with the "glass" texture, you'd call the "glass-blue.css" file in the head of your HTML. See screenshot below.</p>
+		
+		<p><img src="assets/images/skin-code.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="custom-menu"><strong>Menu Color and Shape</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Unlike the "body" and "skin" options, the menu color and shape is not determined by calling a separate CSS file, but by using a different CSS class for the menu. You're given 15 color choices and two menu shapes.</p>
+		
+		<p align="center"><img src="assets/images/menu-shape.jpg" class="pretty" /></p>
+		
+		<p>30 Available Menu Classes:</p>
+		
+		<ol>
+			<li>flip-black</li>
+			<li>flip-blue</li>
+			<li>flip-brown</li>
+			<li>flip-dark-purple</li>
+			<li>flip-dark</li>
+			<li>flip-green</li>
+			<li>flip-light-blue</li>
+			<li>flip-light</li>
+			<li>flip-navy</li>
+			<li>flip-orange</li>
+			<li>flip-pink</li>
+			<li>flip-purple</li>
+			<li>flip-red</li>
+			<li>flip-slate</li>
+			<li>flip-teal</li>
+			<li>classic-black</li>
+			<li>classic-blue</li>
+			<li>classic-brown</li>
+			<li>classic-dark-purple</li>
+			<li>classic-dark</li>
+			<li>classic-green</li>
+			<li>classic-light-blue</li>
+			<li>classic-light</li>
+			<li>classic-navy</li>
+			<li>classic-orange</li>
+			<li>classic-pink</li>
+			<li>classic-purple</li>
+			<li>classic-red</li>
+			<li>classic-slate</li>
+			<li>classic-teal</li>
+		</ol>
+		
+		<p>So, for example, if you wanted to use "flip" shape with the color "dark", you'd use the class "flip-dark" in your HTML. See screenshot below.</p>
+		
+		<p><img src="assets/images/menu-code.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="custom-social"><strong>Contact and Social Networking Buttons</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Currently, you will see there are only four social buttons in the top right corner of the theme. However, many more have been included with the theme. There are 19 icons included for use as buttons with pre-set CSS classes, as well as two styles (light and dark) included for each. Below is a full list of available button classes you can use.</p>
+		
+		<p align="center"><img src="assets/images/social.jpg" class="pretty" /></p>
+		
+		<p>These classes are utilized in the code as shown in the screenshot below. The current example includes 4 buttons, however you can add on as many as you want using the classes below.</p>
+		
+		<ol>
+			<li>delicious-dark</li>
+			<li>delicious-light</li>
+			<li>deviantart-dark</li>
+			<li>deviantart-light</li>
+			<li>digg-dark</li>
+			<li>digg-light</li>
+			<li>dribbble-dark</li>
+			<li>dribbble-light</li>
+			<li>email-dark</li>
+			<li>email-light</li>
+			<li>facebook-dark</li>
+			<li>facebook-light</li>
+			<li>feedburner-dark</li>
+			<li>feedburner-light</li>
+			<li>flickr-dark</li>
+			<li>flickr-light</li>
+			<li>linkedin-dark</li>
+			<li>linkedin-light</li>
+			<li>mixx-dark</li>
+			<li>mixx-light</li>
+			<li>myspace-dark</li>
+			<li>myspace-light</li>
+			<li>picassa-dark</li>
+			<li>picassa-light</li>
+			<li>reddit-dark</li>
+			<li>reddit-light</li>
+			<li>rss-dark</li>
+			<li>rss-light</li>
+			<li>squidoo-dark</li>
+			<li>squidoo-light</li>
+			<li>technorati-dark</li>
+			<li>technorati-light</li>
+			<li>twitter-dark</li>
+			<li>twitter-light</li>
+			<li>vimeo-dark</li>
+			<li>vimeo-light</li>
+			<li>youtube-dark</li>
+			<li>youtube-light</li>
+		</ol>
+		
+		<p>In the screenshot below, you can see how these buttons classes are utilized in the code.</p>
+		
+		<p><img src="assets/images/social-code.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="custom-search"><strong>Main Menu Search Bar</strong> - <a href="#toc">top</a></h3>
+		
+		<p>If you're keeping this theme as simply a static HTML template, there's a good chance you won't need the search bar that pops up from the main menu. So, I've made sure to make it so if you remove it, nothing else will be effected.</p>
+		
+		<p align="center"><img src="assets/images/search.jpg" class="pretty" /></p>
+		
+		<p>If you'd like the search removed from your site, simply delete the code highlighted in the screenshot below.</p>
+		
+		<p><img src="assets/images/search-code.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="custom-fonts"><strong>Fonts</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme utilizes the <a href="http://code.google.com/webfonts">Google Font Directory</a> and CSS3's <a href="http://www.w3.org/TR/css3-fonts/#the-font-face-rule">@font-face</a> in order to bring you the most modern way of inserting a fancy font into your theme.</p>
+		
+		<p><img src="assets/images/fonts.jpg" class="pretty" /></p>
+		
+		<p>Currently all of the header fonts for this theme are using the Google Font Directory's <a href="http://code.google.com/webfonts/family?family=Yanone+Kaffeesatz">Yanone Kaffeesatz</a> font. You can easily change the header font by including a new font from the Google Font Directory or any source you like, and then changing the appropriate CSS. Both steps are outline with the screenshots below.</p> 
+		
+		<p><img src="assets/images/fonts-code-css.jpg" class="pretty" /></p>
+		
+		<hr>
+		
+		<h2 class="alt">Sliders</h2>
+		
+		<h3 id="slider-cycle" class="alt">Anything Slider</h3>
+		
+		<p><img src="assets/images/slider-anything.jpg" class="pretty" /></p>
+		
+		<p>This theme's "Anything Slider" is powered by <a href="http://jquery.malsup.com/cycle/">Cycle</a>, an amazing jQuery plugin by <a href="http://jquery.malsup.com/">Malsup</a>. There are many features we're not actually utilizing in this theme that you could potentially do with the plugin. I recommend you read through <a href="http://jquery.malsup.com/cycle/options.html">their documentation</a> if you're looking to customize the slider further.</p>
+		
+		<p>Basically, with Cycle, you can designate a particular HTML element's ID or class when you call the cycle jQuery function. Then, it will take the top-level elements from within and produce the slides of the slideshow out of them. For example, you could designate an ID of a an unordered list, and then Cycle would use all of the list items within as the slides for the slideshow.</p>
+		
+<pre>
+&lt;ul id=&quot;slideshow&quot;&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+		
+		<p>In the case of this theme's default homepage, we have a DIV that surrounds the slideshow and then DIV's within that serve as the individual slides. The basic setup is something like this:</p>
+		
+		<p>1) The JavaScript</p>
+<pre>
+&lt;script&gt;
+jQuery.noConflict()(function($){
+	$(document).ready(function() {
+		$(&quot;#homepage-slideshow .slideshow&quot;).cycle({
+			fx: &quot;fade&quot;,
+			timeout: 5000,
+			pager: &quot;#homepage-slideshow .slideshow-dots&quot;,
+			pagerAnchorBuilder: paginate,
+			next: '#homepage-slideshow .next',
+			prev: '#homepage-slideshow .prev',
+			speed: &quot;2000&quot;,
+			pause: 1,
+			easing: &quot;easeInOutQuint&quot;
+		});
+	});
+});
+&lt;/script&gt;
+</pre>
+
+		<p>2) The HTML Markup</p>
+		
+<pre>
+&lt;div class=&quot;slideshow&quot;&gt;
+
+	&lt;div class=&quot;slide&quot;&gt;  
+	Content of slide 1...
+	&lt;/div&gt;
+
+	&lt;div class=&quot;slide&quot;&gt; 
+	Content of slide 2...
+	&lt;/div&gt; 
+	
+	&lt;div class=&quot;slide&quot;&gt; 
+	Content of slide 3...
+	&lt;/div&gt; 
+	
+	&lt;div class=&quot;slide&quot;&gt; 
+	Content of slide 4...
+	&lt;/div&gt; 
+	
+&lt;/div&gt;
+</pre>
+
+		<p class="caption">Note: On the default homepage, the individual slide DIV's are styled to be 940x350. You can put whatever HTML content you like within that area. Also, take note the actual HTML markup in the theme is a little more complicated than what you see here. There is more going on in order to add navigation and styling around the slideshow. However, this code snippet should give you an idea of how it all works in the simplest form.</p>
+		
+		<hr>
+		
+		<h3 id="slider-piecemaker" class="alt">Piecemaker (3D Cubes)</h3>
+		
+		<p><img src="assets/images/slider-3d.jpg" class="pretty" /></p>
+		
+		<p>This theme's 3D slider is powered by <a href="http://www.modularweb.net">Piecemaker</a>, an amazing open-source flash plugin. This theme includes a very basic installation of this plugin. For more support or advanced configuration, visit their official website.</p>
+		
+		<p>I've included all of the files to make Piecemaker work in one place:</p>
+		
+		<p>/layout/plugins/piecemaker/</p>
+		
+		<p>There, you will find Piecemaker's SWF file, the CSS file, and the XML file. The XML file is probably the most important to take note of, as it's where you setup everything that gets inserted into the slideshow.</p>
+		
+		<p>To actually place the slideshow into a page, you need to insert the flash object. In the example in this theme, it's being inserted with the famous <a href="http://blog.deconcept.com/swfobject/">SWFObject</a> method.</p>
+		
+		<p><img src="assets/images/slider-3d-code.jpg" class="pretty" /></p>
+		
+		<p><em>Warning:</em> Be careful with how you configure Piecemaker. In the XML file, some of the settings with how the cubes move has been set to work well with this theme. The cubes move back a bit before rotating in order for them not to hit the edges of the limited space available for the slideshow.</p>
+		
+		<hr>
+		
+		<h3 id="slider-accordion" class="alt">Accordion</h3>
+		
+		<p><img src="assets/images/slider-accordion.jpg" class="pretty" /></p>
+		
+		<p>For the accordion slideshow, this theme uses the <a href="http://www.jeremymartin.name/projects.php?project=kwicks">Kwicks</a> plugin. It's not as easy to edit as some of the plugins we're using with this theme. The configuration requires that you set the width of each element with CSS. So, you'll need to know how many elements you plan to have, and then do the math on how wide each element needs to be in order for them to fit.</p>
+		
+		<p>In the example in this theme homepage, I'm using 4 images with 4px of spacing in between each section. So, each piece has been set with CSS to be 232px wide. The total area of the slideshow is 940px, and so it all works out like this:</p>
+		
+		<p>232px + 4px + 232px + 4px + 232px + 4px + 232px = <strong>940px</strong></p>
+		
+		<p><img src="assets/images/slider-accordion-code.jpg" class="pretty" /></p>
+		
+		<p class="caption">Note: You can find all of the CSS located in /layout/css/core/core.css. Search for ACCORDION.</p>
+		
+		<hr>
+		
+		<h3 id="slider-nivo" class="alt">Nivo</h3>
+		
+		<p><img src="assets/images/slider-nivo.jpg" class="pretty" /></p>
+		
+		<p>The <a href="http://nivo.dev7studios.com/">Nivo Slider</a> is a pretty neat little plugin that's relatively easy to use. See the official website on documentation for using. It's much more limiting than this theme's anything slider, but cool none-the-less. If you like the fancy transitions and you're okay with just having images for your slider, then go for it!</p>
+		
+		<p>Here's the gist of how it gets inserted into a page on your site. Note that I've removed all of the styling and navigation HTML markup so you can get an idea of how it works at its core.</p>
+		
+		<p>1) The HTML Markup</p>
+
+<pre>
+&lt;div class=&quot;slideshow&quot;&gt;
+
+	&lt;a href=&quot;http://www.google.com&quot; title=&quot;Alyeska&quot;&gt;
+		&lt;img src=&quot;images/sample_940x350_1.jpg&quot; alt=&quot;Alyeska&quot; /&gt;
+	&lt;/a&gt;
+	
+	&lt;a href=&quot;http://www.google.com&quot; title=&quot;Alyeska&quot;&gt;
+		&lt;img src=&quot;images/sample_940x350_2.jpg&quot; alt=&quot;Alyeska&quot; /&gt; 
+	&lt;/a&gt;
+	
+	&lt;a href=&quot;http://www.google.com&quot; title=&quot;Alyeska&quot;&gt;
+		&lt;img src=&quot;images/sample_940x350_3.jpg&quot; alt=&quot;Alyeska&quot; /&gt;
+	&lt;/a&gt;
+	
+	&lt;a href=&quot;http://www.google.com&quot; title=&quot;Alyeska&quot;&gt;
+		&lt;img src=&quot;images/sample_940x350_4.jpg&quot; alt=&quot;Alyeska&quot; /&gt;
+	&lt;/a&gt;
+	
+&lt;/div&gt;&lt;!-- .slideshow (end) --&gt;
+</pre>
+
+		<p>2) The JavaScript</p>
+		
+<pre>
+&lt;script&gt;
+jQuery.noConflict()(function($){
+	$(document).ready(function() {
+		$(&quot;.slideshow&quot;).nivoSlider({
+			effect: &quot;sliceDown&quot;,
+			directionNavHide: false
+		});
+	});
+});
+&lt;/script&gt;
+</pre>
+		
+		<hr>
+		
+		<h2 class="alt">File Structure</h2>
+		
+		<h3 id="files-structure" class="alt">General File Structure</h3>
+		
+		<p>All source related files having to do with CSS, images, JavaScript, and plugins have been organized within the <em>layout</em> directory.</p>
+		
+		<p>Any images not being called from with CSS are located within the root <em>images</em> directory.</p>	
+		
+		<p><img src="assets/images/files.png" class="pretty" /></p>
+		
+		<hr>
+		
+		<h3 id="files-css" class="alt">CSS Files</h3>
+		
+		<p>Within the <em>/layout/css</em> directory, you will find all of the CSS files organized within four directories.</p>
+		
+		<ol>
+			<li>
+				<strong>core</strong><br />
+				
+				<p>This directory contains all of the core CSS files that makeup the overall shaping of the theme. Essentially, you'll find everything in here that's not related to colors.</p>
+				
+			</li>
+			<li>
+				<strong>shape</strong><br />
+				
+				<p>These CSS file accomplish any slight modifications needed in order for the theme to go from stretch to boxed or visa versa. You'll find four CSS files in here - boxed-dark.css, boxed-light.css, stretch-dark.css, and stretch-light.css</p>
+				
+			</li>
+			<li>
+				<strong>skin</strong><br />
+				
+				<p>The skin is the overall colors of the outer background of the theme, as well as the link colors. Here you will find 150 CSS files that allow for 15 colors combined with 10 textures (i.e. 15x10 = 150).</p>
+				
+			</li>
+			<li>
+				<strong>style</strong><br />
+				
+				<p>These CSS files control the general styling that go with theme (as far as light vs dark) that don't effect the theme shape. You'll find two files in here - light.css and dark.css. For example, any stylings in the dark.css file will apply to both the dark boxed and dark stretch layout shapes.</p>
+				
+			</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="files-js" class="alt">JavaScript Files</h3>
+		
+		<p>Within <em>/layout/js/</em>, there are 10 JavaScript files. Most of these are included in order to make certain plugins work. Ideally, you wouldn't want to have so many JS files called in the header of an HTML document, however I've done it this way in order to make the theme easier to edit. The theme will work just fine the way it is. It's just not the absolute most efficient way is all. If you're on a cheaper hosting account and you experience extreme slowness in the loading of your site, one option may be to copy and paste all the theme's different JavaScript into a single file to cut down on the http requests to different JavaScript files in your HTML document.</p>
+		
+		<p>The most important JavaScript file included is <strong>custom.js</strong>. If you edit any JavaScript, this should be the only file you edit. All other files are plugin JS files and should never be edited other than to update the plugin from the plugin author's website. See the Sources and Credit section at the bottom of this documentation to find links to many of their websites.</p>
+		
+		<hr>
+		
+		<h3 id="files-flash" class="alt">Flash Files</h3>
+		
+		<p>There are only two Flash files included with this theme outside of the Piecemaker plugin. These include an audio payer and a video player. They were developed specifically for use in ThemeBlvd themes. You will find these two SWF files in the <em>/layout/flash/</em> directory.</p>
+		
+		<hr>
+		
+		<h2 class="alt">Final Notes</h2>
+		
+		<h3 id="fonts" class="alt">PSD Fonts</h3>
+		
+		<p>Below are the fonts used in the Photoshop files included with this theme.</p>
+		
+		<ul>
+			<li><a href="http://www.yanone.de/typedesign/kaffeesatz/">Yanone Kaffeesatz</a></li>
+			<li><a href="http://new.myfonts.com/fonts/agfa/futura/">Futura</a></li>
+		</ul>
+		
+		<h3 id="credits" class="alt">Sources and Credits</h3>
+		
+		<p>I would like to thank the following providers. This theme wouldn't have been possible without the hard work and dedication of all of them.</p>
+		
+		<ul>
+            <li><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+            <li><a href="http://flowplayer.org/tools/">jQuery Tools</a></li>
+            <li><a href="http://nivo.dev7studios.com/">Nivo Slider</a></li>
+            <li><a href="http://www.modularweb.net/">Piecemaker</a></li>
+            <li><a href="http://www.jeremymartin.name/projects.php?project=kwicks">Kwicks</a></li>
+            <li><a href="http://malsup.com/jquery/cycle/" title="Cycle">Cycle</a></li>
+            <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" title="jQuery Validation">jQuery validation</a></li>
+            <li><a href="http://users.tpg.com.au/j_birch/plugins/superfish/" title="Superfish">Superfish</a></li>
+            <li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" title="Pretty Photo">prettyPhoto</a></li>
+            <li><a href="http://wefunction.com/">Function</a> (<a href="http://wefunction.com/2008/07/function-free-icon-set/">icon set used</a>)</li>
+			<li><a href="http://lifetreecreative.com/">Gedy Rivera </a> (<a href="http://lifetreecreative.com/icons/">icon set used</a>)</li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on Theme Forest, you might consider visiting the forums and asking your question in the "Item Discussion" section. And if you like the theme, please go to your Theme Forest downloads page and give this product a 5 star rating :-) Thanks so much!</p>
+				
+		<p class="append-bottom alt large"><strong><a href="http://www.jasonbobich.com" title="Jason Bobich">Jason Bobich</a> and <a href="http://www.themeblvd.com" title="Theme Blvd">Theme Blvd</a></strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

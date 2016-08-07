@@ -1,0 +1,199 @@
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+#featured {
+    float: left;
+    position: relative;
+}
+#featured ul {
+	margin: 0 !important;
+}
+.nivoSlider {
+    position: relative;
+}
+.nivoSlider img {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.nivoSlider a.nivo-imageLink {
+    border: 0 none;
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+}
+.nivo-slice {
+    display: block;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+.nivo-box {
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
+.nivo-caption {
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+}
+.nivo-caption p {
+    margin: 0;
+    padding: 5px;
+}
+.nivo-caption a {
+    display: inline !important;
+}
+.nivo-html-caption {
+    display: none;
+}
+.nivo-directionNav a {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+}
+.nivo-prevNav {
+    left: 0;
+}
+.nivo-nextNav {
+    right: 0;
+}
+.nivo-controlNav a {
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+.nivo-controlNav a.active {
+    font-weight: bold;
+}
+.theme-default .nivoSlider {
+    background: url("loading.gif") no-repeat scroll 50% 50% #FFFFFF;
+    margin-bottom: 38px;
+    position: relative;
+}
+.theme-default .nivoSlider img {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.theme-default .nivoSlider a {
+    border: 0 none;
+    display: block;
+}
+.theme-default .nivo-controlNav {
+    bottom: -42px;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+}
+.theme-default .nivo-controlNav a {
+    background: url("bullets.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 3px;
+    text-indent: -9999px;
+    width: 22px;
+}
+.theme-default .nivo-controlNav a.active {
+    background-position: 0 -22px;
+}
+.theme-default .nivo-directionNav a {
+    background: url("arrows.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    height: 30px;
+    text-indent: -9999px;
+    width: 30px;
+}
+.theme-default a.nivo-nextNav {
+    background-position: -30px 0;
+    right: 15px;
+}
+.theme-default a.nivo-prevNav {
+    left: 15px;
+}
+.theme-default .nivo-caption {
+    font-family: Helvetica,Arial,sans-serif;
+}
+.theme-default .nivo-caption a {
+    border-bottom: 1px dotted #FFFFFF;
+    color: #FFFFFF;
+}
+.theme-default .nivo-caption a:hover {
+    color: #FFFFFF;
+}
+.caption {
+    background: none repeat scroll 0 0 #000000;
+    bottom: 20px;
+    color: #747474;
+    opacity: 0.9;
+    padding: 20px;
+    position: absolute;
+    right: 20px;
+    width: 35%;
+}
+.caption h3 {
+    color: #F7F7F7;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.caption p {
+    color: #BCBCBC;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+#slider-cycle-nav {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    z-index: 99;
+}
+#slider-cycle-nav li {
+    display: block;
+    float: left;
+    margin-left: 4px;
+}
+#slider-cycle-nav li a {
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    text-indent: -99999px;
+    width: 48px;
+}
+#cycle-prev {
+    background: url("../images/arrows-sl.png") no-repeat scroll left bottom transparent;
+}
+#cycle-prev:hover {
+    background: url("../images/arrows-sl.png") no-repeat scroll left top transparent;
+}
+#cycle-next {
+    background: url("../images/arrows-sl.png") no-repeat scroll right bottom transparent;
+}
+#cycle-next:hover {
+    background: url("../images/arrows-sl.png") no-repeat scroll right top transparent;
+}

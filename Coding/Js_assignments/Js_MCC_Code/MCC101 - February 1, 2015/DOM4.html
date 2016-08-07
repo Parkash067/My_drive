@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .bold {
+            font-weight : bold;
+        }
+
+        #para1{
+            color : blue;
+        }
+
+    </style>
+    <script>
+        function initialize(){
+            var p1 = document.getElementsByTagName('p')[0];
+            alert("has id : " + p1.hasAttribute('id'));
+            alert("class : " + p1.getAttribute('class'));
+            p1.setAttribute('id', 'para1');
+            alert("has id : " + p1.hasAttribute('id'));
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <p class="bold">The quick brown fox jumps over the lazy dog.</p>
+</body>
+</html>

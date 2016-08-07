@@ -1,0 +1,78 @@
+
+/*Universal Selector*/
+/*
+* {
+    border :1px solid red;
+}
+*/
+
+/*
+Type Selector
+*/
+/*
+h2,p {
+    background-color: yellowgreen;
+}
+li {
+    background-color: red;
+}
+*/
+
+/*Class Selector*/
+/*
+p.note {
+    background-color: cyan;
+
+}
+li.note {
+    background-color: yellowgreen;
+}
+*/
+/*ID Selector*/
+/*
+#introduction {
+    border: 4px solid maroon;
+}
+*/
+
+/*Child Selector*/
+/*
+li > a {
+    background-color: yellowgreen;
+}
+*/
+
+/*Descendant Selector*/
+/*
+li a {
+    background-color: yellowgreen;
+}
+*/
+/*
+Adjacent Sibling Selector*/
+/*
+h1+p {
+    background-color: yellowgreen;
+}
+*/
+/*
+General Sibling Selector*/
+/*
+h1~p {
+    background-color: yellowgreen;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>session</title>
+    <script>
+        function store(){
+           /* var username =document.getElementById('username').value;
+             sessionStorage.setItem('username', username);
+             alert(sessionStorage.getItem("username"));*/
+
+
+            var username =document.getElementById('username').value;
+            localStorage.setItem('username', username);
+           //alert(sessionStorage.getItem("username"));
+        }
+
+    </script>
+</head>
+<body>
+<label>Name</label><input type="text" id="username">
+<br>
+<label>Password</label><input type="password" id="password">
+<br>
+<input type="button" value="login" onclick="store()">
+
+</body>
+</html>

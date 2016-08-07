@@ -1,0 +1,19 @@
+Backbone Templating
+ Backbone requires underscore,underscore can render templates
+ There are three valid types of code blocks
+ <% %> Execute arbitary code
+ <%= %> Evaluate an expression and render the result inline
+ <%- %> Evaluate an expression and render the html escaped result inline
+
+Example#1
+var Demo = Backbone.View.extend({
+	render:function(){
+		var data={lat:-27,lon:153};
+ 		this.$el.html(
+		_.template('<%= lat %> <%= lon %>',data));
+		sreturn this;
+	}
+	
+})
+var DemoView=new Demo()
+DemoView.render()

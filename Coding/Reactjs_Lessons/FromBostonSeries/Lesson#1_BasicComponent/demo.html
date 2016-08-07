@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple component</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div id="content"></div>
+
+<script type="text/jsx">
+    //Component name must be start with capital letter
+    //Every component must have render function
+
+    var DemoComponent = React.createClass({
+        render: function() {
+            return(
+                    <h2>My name is parkash</h2>
+            );
+        }
+    });
+
+    React.render(<DemoComponent />,document.getElementById('content'));
+    //In this function first parameter is the name of component and the second parameter is where we want to add this component
+</script>
+
+
+
+
+</body>
+</html>

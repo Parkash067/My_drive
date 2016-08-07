@@ -1,0 +1,145 @@
+
+h1.brand {
+    padding: 0;
+    height: 75px;
+    padding-top: 75px;
+    margin: -104px auto 0;
+    width: 700px;
+    background: royalblue;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px #000;
+    color: #fff;
+    font-family: cursive;
+    font-size: 41px;
+    text-shadow: 1px 1px 0 #000;
+    line-height: 81px;
+}
+.cntr {
+    text-align: center;
+}
+
+#headerSection {
+    border-bottom: 1px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+    transition: all 800ms;
+    z-index: 9999;
+    background-color: lavender;
+
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    border-bottom: 2px solid royalblue;
+    font-family: cursive;
+}
+a{
+    font-family: cursive;
+}
+h2, h3 {
+    color: royalblue;
+    text-rendering: optimizelegibility;
+}
+.align{
+    text-align: justify;
+}
+h1 {
+    padding: 0 0 44px;
+    font-weight: 200;
+    font-size: 54px;
+    line-height: 56px;
+    color: #464646;
+    margin-top: -100px;
+    font-family: 'HelveticaRegular';
+    text-rendering: optimizelegibility;
+
+}
+#ourServices {
+    background-color: white;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+#portfolioSection
+{
+
+    border-top: 1px solid #ddd;
+    padding: 130px 0 44px;
+}
+.li-tab
+{
+    background-color: royalblue;
+    border-radius: 5px;
+
+}
+
+
+.a-tab
+{
+    color: white !important;
+}
+.a-tab:hover
+{
+    color: black !important;
+}
+
+.a-tab:focus
+{
+    color: black !important;
+
+}
+
+.nav-tabs {
+    border-bottom: 1px none #ddd;
+}
+.tab-content {
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px dotted #dddddd;
+    padding: 10px;
+    background-color: white;
+}
+
+.hololens
+{
+    font-size: 60px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #dddddd;
+}
+.span3
+{
+  /*  float:right ;*/
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+
+}
+#CareerSection
+{
+    background-color: white;
+    padding: 130px 0 44px;
+    border-top: 1px solid #dddddd;
+}
+#contactSection
+{
+    padding: 130px 0 44px;
+    border-top: 1px solid #dddddd;
+}
+.career1
+{
+    margin-top: 20px;
+}
+.jobs
+{
+margin-left: 2px;
+    cursor: pointer;
+}

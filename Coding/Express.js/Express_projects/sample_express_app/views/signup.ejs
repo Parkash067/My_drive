@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+        <meta charset="utf-8">
+		<link href="/stylesheets/form.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+       	<!--webfonts-->
+		<!--//webfonts-->
+</head>
+<body>
+	 <!-----start-main---->
+	 <div class="main">
+		<div class="login-form">
+			<h1>Create your account</h1>
+					<div class="head">
+						<img src="/images/user1.png" alt="" height="120px" width="120px"/>
+					</div>
+				<form action="/login" method="post">
+                        <input type="text" class="text"  onfocus="this.value = '';" name="firstname" required placeholder="First Name" >
+                        <input type="text" class="text"  onfocus="this.value = '';" name="lastname" required placeholder="Last Name" >
+						<input type="email" class="text"  onfocus="this.value = '';" name="email" required placeholder="Email" >
+						<input type="password"  onfocus="this.value = '';" name="password" required placeholder="Password">
+						<div class="submit">
+							<input type="submit" onclick="myFunction()" value="SIGNUP" >
+					    </div>
+                
+				</form>
+			</div>
+			<!--//End-login-form-->
+
+		</div>
+			 <!-----//end-main---->
+		 		
+</body>
+</html>

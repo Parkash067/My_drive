@@ -1,0 +1,29 @@
+.value {
+    background: lightgray;
+    opacity: 0.5;
+    width: 100px;
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left:10px;
+    
+}
+li{
+    
+    display: inline-block;
+    list-style-type: none !important;
+    margin-left: 10px;
+    font-size: 16px
+   
+}
+
+.link {
+    display: inline-block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px
+}
+.count{
+    display: inline-block;
+}

@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <script type="text/javascript">
+        function Testsocket() {
+            if ("WebSocket" in window) {
+                alert("your browsObjer supported to websocket");
+
+                var wsObj = new WebSocket("wsObj://localhost:63342/echo");
+                var socket =new WebSocket()
+                wsObj.onopen = function () {
+
+                    wsObj.send("send message");
+                    alert("Message has been sent");
+                };
+                wsObj.onmessage = function (str) {
+                    var received_msg = str.data;
+                    alert("message is receiveing...");
+                };
+                wsObj.onclose = function () {
+
+                    alert("connectio has been closed");
+                };
+            }
+            else {
+
+                alert("your browsObjer does not supported to websocket");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="dvm">
+    <a href="javascript:Testsocket()">click for run Websocket</a>
+</div>
+</body>
+</html>

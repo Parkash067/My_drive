@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>hextobi</title>
+    <script>
+        function convertNumToBase ( num, baseA, baseB )
+        {
+
+                return parseInt( num, baseA ).toString( baseB );
+
+        }
+     // document.writeln(convertNumToBase( "1234fa13475823ed", 16, 2 ))  ; 		// return "11111111"
+     //
+var binary=0;
+var result;
+        var M="0123456789abcd";
+        var key="ABCD";
+        var k_in_binary;
+        var left;
+        var right;
+result=convertNumToBase( M, 16, 2 );
+        k_in_binary=convertNumToBase(key,16,2);
+//alert(result);
+        if(result.length!=64 )
+        {
+           //binary+=result;
+            //alert(result.length);
+            for(var i=result.length;i<64;i++)
+            {
+              result = "0"+result;
+
+            }
+        }
+        if(k_in_binary.length!=64 )
+        {
+            //binary+=result;
+            //alert(result.length);
+            for(var i=k_in_binary.length;i<64;i++)
+            {
+                k_in_binary = "0"+k_in_binary;
+
+            }
+        }
+        else
+        {
+            alert(false);
+        }
+        document.writeln("M:"+M+"<br>");
+        document.writeln("The key is:"+key+"<br>");
+        document.writeln("The M in binary number is="+result+"<br>");
+        document.writeln("The length of binary is="+result.length+"<br><br>");
+
+        left=result.substr(0,(result.length/2));
+     /*   document.writeln("Left bits are:"+left+"<br>");
+        document.writeln("length of left most bits"+left.length+"<br><br>");
+*/
+        right=result.substr((result.length/2));
+       /* document.writeln("Right bits are:"+right+"<br>");
+       document.writeln("length of right most bits"+right.length+"<br><br>");
+*/
+
+        document.writeln("The binary value of key is:"+k_in_binary+"<br>");
+        document.writeln("The value of k after passing PC1-table:");
+       //alert(binary.length);
+        var pc1=[57,49,41,33,25,17,9,1,58,50,42,34,26,18
+                ,10,2,59,51,43,35,27,19,11,3,60,52,44,36
+                ,63,55,47,39,31,23,15,7,62,54,46,38,30,22
+                ,14,6,61,53,45,37,29,21,13,5,28,20,12,4 ];
+
+        var k_after_pc1=[];
+        for(var i=0;i<pc1.length;i++) {
+            k_after_pc1 += (result[pc1[i]-1]);
+            document.writeln(result[pc1[i]-1]);
+        }
+        document.writeln("<br><br>"+"Now we create blocks");
+        //alert(k_after_pc1.length);
+var c0,d0;
+        c0=k_after_pc1.substr(0,(k_after_pc1.length/2));
+        document.writeln("<br>"+"C="+c0);
+       // alert(c0.length);
+        d0=k_after_pc1.substr((k_after_pc1.length/2));
+        document.writeln("<br>"+"D="+d0);
+       // alert(d0.length);
+
+/*var leftshift=c0.charAt(0);
+var c1=c0.slice(1).concat(leftshift);
+document.writeln("<br>"+"C1="+c1);
+
+
+         leftshift=d0.charAt(0);
+        var d1=d0.slice(1).concat(leftshift);
+        document.writeln("<br>"+"D1="+d1+"<br>");*/
+document.writeln("<br><br>"+"The values are");
+var shifts=[1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1];
+var k_value;
+ var sbstr;
+        var IP_table=[
+            58,    50,   42,    34,    26,   18,    10,    2,
+            60,    52,   44,    36,    28,   20,    12,    4,
+            62,    54,   46,    38,    30,   22,    14,    6,
+            64,    56,   48,    40,    32,   24,    16,    8,
+            57,    49,   41,    33,    25,   17,     9,    1,
+            59,    51,   43,    35,    27,   19,    11,    3,
+            61,    53,   45,    37,    29,   21,    13,    5,
+            63,    55,   47,    39,    31,   23,    15,    7];
+        var pc2=[
+            14,    17,   11,    24,     1,    5,
+            3,    28,   15,     6,    21,   10,
+            23,    19,   12,     4,    26,    8,
+            16 ,    7,   27,    20,    13,    2,
+            41,    52,   31,    37,    47,   55,
+            30 ,   40,   51,    45,    33,   48,
+            44,    49,   39,    56,    34,   53,
+            46 ,   42,   50,    36,    29,   32
+        ];
+
+       for(var i=0;i<shifts.length;i++)
+        {
+
+            sbstr=c0.slice(0,shifts[i]);
+            c0=c0.slice(shifts[i]);
+            c0=c0.concat(sbstr);
+            document.writeln("<br><br>"+"C"+i+"="+c0);
+            sbstr=d0.slice(0,shifts[i]);
+            d0=d0.slice(shifts[i]);
+            d0=d0.concat(sbstr);
+            document.writeln("<br>"+"D"+i+"="+d0+"<br>");
+            document.writeln("K"+i+"=");
+          //  document.writeln("K"+i+"="+c0+d0+"<br>");
+            //document.writeln("K"+i+"="+(c0+d0).length+"<br>");
+            k_value=c0+d0;
+            for(var j=0;j<pc2.length;j++)
+            {
+                document.writeln(k_value[pc2[j]-1]);
+            }
+        }
+document.writeln("<br><br>");
+        var ip_result=[];
+        document.writeln("IP value is=");
+        for(var i=0;i<IP_table.length;i++)
+        {
+            //alert(i);
+            ip_result+=result[IP_table[i]-1];
+            document.writeln(result[IP_table[i]-1]);
+        }
+
+        document.writeln("<br>");
+
+        var left_ip,right_ip;
+        left_ip=ip_result.substr(0,32);
+        document.writeln("Left_ip bits are:"+left_ip+"<br>");
+        document.writeln("length of left most bits"+left_ip.length+"<br><br>");
+
+        right_ip=ip_result.substr((ip_result.length/2));
+        document.writeln("Right_ip bits are:"+right_ip+"<br>");
+        document.writeln("length of right most bits"+right_ip.length+"<br><br>");
+
+//document.writeln("<br><br><br><br>");
+
+
+       /* document.writeln("<br>"+"The value of D are");
+        for(var i=0;i<shifts.length;i++)
+        {
+
+            sbstr=d0.slice(0,shifts[i]);
+            d0=d0.slice(shifts[i]);
+            d0=d0.concat(sbstr);
+            document.writeln("<br>"+d0);
+
+        }
+        for(var i=0;i<shifts.length;i++)
+        {
+            document.writeln(c0[i]+d0[i]);
+        }*/
+
+
+        /* var str='parkash';
+                alert(str.length);*//*
+*/
+/*
+*/
+//document.writeln()*/docum
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

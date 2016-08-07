@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+            function initialize(){
+                //alert(document.childNodes.length);
+                //console.log(document.childNodes);
+
+                //alert(document.childNodes[1].childNodes.length);
+                //console.log(document.childNodes[1].childNodes);
+
+                //alert(document.getElementById('ny').childNodes.length);
+                //console.log(document.getElementById('ny').childNodes);
+
+                //alert(document.getElementById('ny').childNodes[1].childNodes[0].nodeType);
+                //alert(document.nodeType);
+
+                //console.log(document.childNodes[1].lastChild);
+                //console.log((document.getElementById('ny').firstChild)
+
+                //console.log(document.getElementById('cal').parentNode);
+
+                //document.getElementsByTagName('p')[0]
+
+                var p1 = document.getElementById('cal').childNodes[0];
+                alert( "Paragraph 1 text : " + p1.innerText);
+
+               var p2 = p1.nextSibling;
+              alert( "Paragraph 2 text : " + p2.innerText);
+//
+//                var p3 = p2.nextSibling;
+//                alert( "Paragraph 3 text : " + p3.innerText);
+
+         /*       var p3 = p1.nextSibling.nextSibling;
+                alert( "Paragraph 3 text : " + p3.innerText);
+
+                var p2 = p3.previousSibling;
+                alert( "Paragraph 2 text : " + p2.innerText);*/
+            }
+        </script>
+    </head>
+    <body onload="initialize()">
+        <div id="cal"><p>Southern Cal is sunny.</p><p>Northern Cal is rainy.</p><p>Eastern Cal is desert.</p>
+        </div>
+        <div id="ny"><p>Urban NY is crowded.</p><p>Rural NY is sparse.</p>
+        </div>
+</body>
+</html>

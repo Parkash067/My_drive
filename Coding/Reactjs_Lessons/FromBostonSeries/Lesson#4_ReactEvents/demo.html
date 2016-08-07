@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactEvents</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<script type="text/jsx">
+    var DemoComponent=React.createClass({
+        details: function () {
+            console.log(this.props.children)
+          alert(this.props.children);
+        },
+
+        render:function(){
+            return(
+                    <div>
+                        <span>{this.props.user}</span>&nbsp;&nbsp;&nbsp;
+                        <a href="#" onClick={this.details}>Details</a>
+
+                    </div>
+            );
+        }
+    });
+
+    React.render(
+            <div>
+                <DemoComponent user="Parkash">He is 23 years Old and study in UOK</DemoComponent>
+                <DemoComponent user="Zain">He is 23 years Old and study in UOK</DemoComponent>
+                <DemoComponent user="Hadi">He is 23 years Old and study in UOK</DemoComponent>
+            </div>,
+            document.getElementById('content'));
+</script>
+
+</body>
+</html>

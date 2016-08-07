@@ -1,0 +1,101 @@
+<html>
+<head>
+	<script>
+		var name = "John Doe";
+		//for(var counter = 1; counter <= 5; counter++)
+		
+		for(var counter = 0; counter < 5; counter = counter+1)
+		{
+			//lines of code to be repeated
+			document.writeln(counter + ":");
+			document.writeln("Welcome");
+			document.writeln(name);
+			document.writeln("!");
+			document.writeln("<br>");
+		}
+		
+		
+		var fruits = ["Banana","Apple","Orange","Grapes"];
+		
+		/*document.writeln(fruits[0]);
+		document.writeln(fruits[1]);
+		document.writeln(fruits[2]);*/
+		
+
+		for(var i = 0; i < fruits.length; i++)
+		{
+			//if( i == 2)
+			//{
+			//	document.writeln("<br>Breaking loop at index " + i );
+			//	break;
+			//}
+			
+			if(i == 2)
+			{
+				document.writeln("<br>Continuing loop at index " + i );
+				continue;
+			}
+			document.writeln("<br>" + i + ":" +fruits[i]);
+		}
+		
+		/*
+		var names = ["Ali","Sami","Sameer", "Ali"];
+		var username = "ALi";
+		var usernameFound = false;
+		
+		for(var t = 0; t< names.length; t++)
+		{
+			if(username.toLowerCase() == names[t].toLowerCase())
+			{
+				usernameFound = true;
+			}
+		}
+		
+		if(usernameFound == true)
+		{
+			document.write("Welcome " + username);
+		}
+		else if(usernameFound == false)
+		{
+			document.write("Username not found");
+		}*/
+		
+		/*
+		var firstNames = ["Ali","Sami","Sameer"];
+		var lastNames = ["Khan" , "Alam"];
+
+		for(var i = 0 ; i < firstNames.length; i++)
+		{
+			for(var j = 0 ; j < lastNames.length; j++)
+			{
+				document.writeln(firstNames[i] +" "+ lastNames[j]+ "<br>");
+				if(i == 1)
+				{
+					break;
+				}
+			}
+		}*/
+
+		var allFruits = "Apple Banana orange grapes Banana";
+		var fruit = "Banana";
+
+		document.writeln("<br><br>");
+		document.writeln("Fruit :  " + fruit);
+		document.writeln("<br>");
+		document.writeln("First index of " + fruit + " in AllFruits is " + allFruits.indexOf(fruit));
+		document.writeln("<br>");
+		document.writeln("Lowercase : "+ fruit.toLowerCase());
+		document.writeln("<br>");
+		document.writeln("Uppercase : "+ fruit.toUpperCase());
+		document.writeln("<br>");
+		document.writeln("Length : " + fruit.length);
+		document.writeln("<br>");
+		document.writeln("Sliced : " + fruit.slice(1,4));
+		document.writeln("<br>");
+		document.writeln("Sliced : " + fruit.slice(2));
+
+	</script>
+</head>
+<body>
+</body>
+</html>

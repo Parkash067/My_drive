@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+    <head>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/notify.js"></script>
+        <title>Car Parking System</title>
+    </head> 
+    <body>
+    <h1>Car Parking System<img src=/images/car.png /></h1>
+    <div id="div1"></div>
+   <p style="display:none"><%= car %></p>
+  <div class=table-container> 
+    <table id="hor-minimalist-a" summary="Employee Pay Sheet" class="scroll">
+    <thead>
+    <tr>
+    <th scope="col">#</th>
+    <th scope="col">License_Number</th>
+    <th scope="col">Entered_Time</th>
+    </tr>
+    </thead>
+    <tbody id='row-data'>
+   
+    
+        <% for(var i=0; i<car.length; i++) {%>
+     <tr class='even' >
+            <td><%= i+1 %></td>
+            <td><%= car[i].number %></td>
+             <td><%= car[i].EnteringTime.toJSON()%></td>
+           </tr>
+        
+        <% } %>
+    
+    
+   
+    </tbody>
+</table> 
+   </div>
+    </body>
+<script>
+ 
+  setInterval(ajaxCall, 5000); //300000 MS == 5 minutes
+
+function ajaxCall() {
+document.getElementById('row-data').innerHTML=" "
+var data={"number":"AXZ-420","EnteringTime":Date()}
+//console.log(data);
+$.ajax({
+                type: 'GET',
+                data: data,
+                cache: false,
+                contentType: 'application/json',
+                datatype: "json",
+                url: '/fetch',
+                success: function (data) {    
+                var _data=JSON.parse(data);
+                 //$.notify(_data,"warning");
+                 for(var i=0;i<_data.length;i++){
+                 var _template="<tr class='even'><td>"+(i+1)+"</td><td>"+_data[i].number+"</td>"+"<td>"+_data[i].EnteringTime+"<tr></td>"
+                    console.log(data);
+                    document.getElementById('row-data').innerHTML +=_template
+                   }                        
+                    //console.log(data);
+                }                                           
+            });
+}
+
+
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Express using Typescript</title>
+</head>
+<body>
+
+    <!-- String Print -->
+    <h1><%= "Hello World" %>
+    <%= "pk's" %>
+    </h1>
+    
+    <!-- Script -->
+ <% var names=["pk","zain","hadi"]   %>
+ <% for(var i=0;i<names.length;i++){  %>
+
+ <%= names[i] %>
+ <br>
+ <% } %>
+    
+  
+    
+    <script>
+        <%- 'alert(1)' %>
+        <%- "document.write('pks')" %>
+     
+       
+       
+        var data = <%- '[{user : "rehan"},{user : "zia"}]' %>
+        console.log(data)        
+    </script>
+    
+    <%- include('partial') -%>
+    <!-- 
+    <%-  %> here minus sign shows that print string without escape sequensce 
+    <%=  %> here = sign shows that print string with escape sequensce 
+    
+     -->  
+</body>
+</html>

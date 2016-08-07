@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+<head>  
+    <title></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/style.css"/>
+<!-- Latest compiled and minified JavaScript -->
+<script src='/javascripts/jquery.min.js'></script>
+ <script src='/javascripts/bootbox.js'></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 
+ </head>
+ 
+ <body>
+ <h1>Blog</h1>
+
+ <form id="blog" action='/commit' method="POST">
+ <p><label>Name</label><input type="text" name='username'/></p>
+ <p>
+ <textarea id='textarea' cols=10 rows=10 name="message"></textarea>
+ </p>
+ 
+ <p>
+ <input type="submit" value="Send"/>
+ </p>
+ 
+ </form>
+  <div>
+ 
+ </div>
+ 
+ <ul class='pre' id='approve_mess'></ul>
+ <script>
+  var pending_message=<%- commit %>
+ for(var i=0;i<pending_message.length;i++){
+ document.getElementById('approve_mess').innerHTML+='<p><li><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;'+pending_message[i].name+" says: "+pending_message[i].message+'</li></p>';
+ }
+ $("#blog").submit(function(e) {
+
+    var url = "/commit"; // the script where you handle the form input.
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#blog").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               bootbox.alert(data, function() {
+  
+                    });  // show response from the php script.
+                    $('#textarea').val(' ')
+           }
+         });
+        
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
+ </script>
+ </body>
+ 
+ </html>

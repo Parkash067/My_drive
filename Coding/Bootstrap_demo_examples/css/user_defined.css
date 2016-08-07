@@ -1,0 +1,26 @@
+nav{
+    background-color: green !important;
+
+}
+.nav-color
+{
+ color: white !important;
+    font-family: cursive !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-color:hover
+{
+    color: lightgoldenrodyellow !important;
+    font-size: 20px;
+}
+.customcontainer
+{
+    margin-left: auto !important;
+    margin-right: auto;!important;
+    max-width: 100%;
+    width: 90%;
+    margin-top: 12em;
+
+}

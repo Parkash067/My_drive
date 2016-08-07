@@ -1,0 +1,111 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>
+			Chat_room
+		</title>
+		<link rel="stylesheet" href="stylesheet.css"/>
+	</head>	
+
+<body>
+<div class="chat">
+	<input type="text" class="chatname" placeholder="Enter your name"/>
+	
+	<div class="chatmessage">
+		
+	</div>
+	
+		<textarea class="chattextarea" placeholder="Type your message...">
+			
+		</textarea>
+	
+	
+	<div class="chatstatus">
+		Status:<span>idle</span>
+	</div>
+	
+</div>	
+<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
+<script>
+	(function(){
+		var getnode=function(s){
+			
+			//console.log('Query selector '+document.querySelector(s));
+			return document.querySelector(s);
+			
+		},
+		
+		status=getnode('.chatstatus span'),
+		messages=getnode('.chatmessage'),
+		textarea=getnode('.chat textarea'),
+		chatname=getnode('.chatname'),
+		//console.log("Textarea: "+textarea+'\n'+"Chatname: "+chatname);
+		statusDefault=status.textContent,
+		setstatus=function(s)
+		{
+			status.textContent=s;
+			if(s!==statusDefault)
+			{
+				var delay=setTimeout(function(){
+					setstatus(statusDefault);
+					clearInterval(delay);
+				},3000);
+			}
+		};
+		//setstatus('Testing...');
+		console.log(statusDefault);
+		try{
+			var socket=io.connect('http://127.0.0.1:8080');
+			}
+		catch(e)
+		{
+			console.log(e)
+		}
+		if(socket!==undefined)
+		{
+			
+			socket.on('output',function(data){
+				if(data.length){
+					for(var i=0;i<data.length;i++){
+						var message=document.createElement('div');
+						message.setAttribute('class','chat-message');
+						message.textContent=data[i].name + ':'+data[i].message;
+						messages.appendChild(message);
+						messages.insertBefore(message,messages.lastChild);
+					}
+				}
+				console.log(data);
+			})
+			
+			socket.on('status',function(data){
+				
+				setstatus(typeof data===Object?data.message:data);
+				if(data.clear===true){
+					textarea.value='';
+				}
+			});
+			
+			console.log("Ok...!");
+			textarea.addEventListener('keydown',function(event){
+				var self=this;
+				name=chatname.value;
+				//console.log(event.which);
+				//console.log(event);
+				if(event.which===13)
+				{
+					socket.emit('input',{
+						name:name,
+						message:self.value
+					});
+					event.preventDefault();
+				}
+				
+			})
+			
+		}
+		
+	})();
+</script>
+</body>		
+	
+</html>

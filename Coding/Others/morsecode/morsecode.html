@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Morse code</title>
+    <script>
+        function alpha()
+        {
+       var alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            var morsecode=
+[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...",
+ "-","..-","...-",".--","-..-","-.--","--.."];
+var check=document.getElementById('char').value.toUpperCase();
+            check=alphabet.indexOf(check);
+           // alert(check);
+
+
+                document.getElementById('output').value=morsecode[check];
+            document.getElementById('output').style.fontWeight='bold';
+
+
+
+        }
+    </script>
+</head>
+<body>
+<label>Enter value</label><br><input type="text" id="char">
+<br>
+
+<br>
+<br>
+<input type="button" value="MORSE CODE" onclick="alpha()"><br><textarea id="output" cols="40" rows="10" ></textarea>
+</body>
+</html>

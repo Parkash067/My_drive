@@ -1,0 +1,116 @@
+What is model?
+Models contain your application state as well logic and behaviour.
+It forms the core of application
+Models contain data of your application
+
+Defining New Model Types
+Creation of model in backbone , syntax:
+   var modelName= Backbone.Model.extend({})
+e.g  
+   var Demo=Backbone.Model.extend({})
+Here demo is the model which extends the model of backbone
+Use upper case for type names
+
+extend() is a function shared by model,Collection,router,and view.
+It establishes an inheritance relationship between two objects. 
+
+Backbone models a javascript constructor function therefore to create
+a new model object call its constructor function with the 'new' operator
+
+The simplest case is to create an instance of Backbone.Model
+ var model = new Backbone.Model(); //Model() is a constructor function
+
+
+Example#1
+var Info=Backbone.Model.extend({
+	name:"pk",
+	age:23
+});
+
+var InfoObj=new Info();
+InfoObj.name="hadi",
+InfoObj.age=30
+console.log(InfoObj);
+var InfoObj2=new Info();
+console.log(InfoObj2);
+
+expected output= hadi,30    pk,23 
+actual output=???
+
+Example#2
+var Info=Backbone.Model.extend({
+  nature:function(){
+   var character="He is really a funny and jolly guy";
+    return character;
+ }
+});
+var InfoObj=new Info();
+var result=InfoObj.nature();
+console.log(result);
+
+expected output: He is really a funny and jolly guy
+actual output:
+
+Example#3 // class properties or we can pass second argument in an object
+var Animal=Backbone.Model.extend({},{
+   category:function(){
+	return "It is an omnivore"
+}
+});
+Animal.category();
+Output:??
+
+Initialize 
+  Initialiaze is the special model method that if specified will be called
+when the object is constructed
+  If a model type has an initialize function defined it will be called 
+when the model is instantiated
+
+Example#4: initialize function()
+var initialize=Backbone.Model.extend({
+  initialize:function(){
+  console.log("mODEL has initialize");  
+ }
+})
+var iniObj=new initialize() 
+
+Model Inheritance
+ Model can herit another model
+
+Model Attributes 
+ set,get,escape
+
+ModelEvents
+ Models raise events when their state changes.
+ To detect a change to a model listen for the change event.
+e.g demo.on('change',function(){
+})
+
+ Listen to a change to a property
+demo.on('change:color',function(){
+})
+
+It is possible to define, trigger and observe custom model events
+Events are identified by string identifiers
+Use 'on' method to bind an event and second argument is the callback
+when event is raise then function call,triggers
+
+var volcano= _.extend({},Backbone.events);
+volcano.on('disaster:eruption',fucntion(options){
+ console.log('duck and cover-'+options.plan);
+})
+
+volcano.off('disaster:eruption')//this line remove event handler
+volcano.trigger('disaster:eruption')
+
+Model Identity
+The id property represents the model's persistent identity. It is undefined until the model has been saved
+The cid property is a temporary identifier used until a model is assigned its id.
+id,cid isNew()
+
+
+The defaults property specifies default values for attributes that are not set in the constructor
+
+toJSON()
+save fetch and destroy 
+

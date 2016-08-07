@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Express using Typescript</title>
+</head>
+<body>
+
+    <!-- String Print -->
+    <h1><%= title %></h1>
+    
+    <!-- Script -->
+    <% for(var i = 0; i < numbers.length; i++){ %>
+        <h3><%= numbers[i] %></h3>
+    <% } %>
+    <div id='list'></div>
+    
+  
+    <script>
+        <%= 'alert(1)' %>
+      var _get=[]  ;
+      var data=<%- (names) %>
+      _get.push(data);
+        document.getElementById('list').innerHTML=_get;
+        var d = <%- (data) %>
+        console.log(d)  
+        console.log(_get);      
+    </script>
+    
+</body>
+</html>

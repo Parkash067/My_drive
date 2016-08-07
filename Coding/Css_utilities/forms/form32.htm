@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<style>
+
+body{
+background:black;
+}
+
+form { max-width:440px; margin:52px auto; }
+
+.form-input {
+
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 15px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid skyblue;
+  transition: all 0.3s;
+  padding: 15px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.form-input:focus { border:2px solid #e7e7e7; border-radius:32px;width:464px }
+
+textarea {
+  height: 160px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: arial, sans-serif;
+  width: 100%;
+  background:skyblue;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; border-radius:19px;  }
+</style>
+</head>
+<body>
+<form>      
+  <input name="name" type="text" class="form-input" placeholder="Full-name" />   
+  <input name="email" type="text" class="form-input" placeholder="Email" />
+  <textarea name="text" class="form-input" placeholder="Description"></textarea>
+  <input type="submit" value="SUBMIT"/>
+</form>
+</body>
+</html>

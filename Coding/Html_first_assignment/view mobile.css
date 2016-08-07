@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+#view
+{
+	float:left;
+	max-width:80%;
+	height:auto;
+	background-color:#FFF;
+}
+#mobileview
+{
+	max-width:100%;
+	height:auto;
+	width:160px;
+	margin-left:100px;
+	margin-top:110px;
+}
+#mobiledetail
+{
+	max-width:100%;
+	height:auto;
+	width:40%;
+	float:right;
+	margin-right:350px;
+	table-layout:auto;
+	background-color:#CCC;
+
+
+}
+.htc
+{
+	color:black;
+	font-family:"Times New Roman", Times, serif;
+	font-size:28px;
+	font-weight:bold;
+}
+.price
+{
+	color:black;
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:bold;
+
+}
+
+#mobiledetail
+{
+	margin-top:75px;
+	}
+
+
+.specs
+{
+	background-color:#FFF;
+	border:hidden;
+}

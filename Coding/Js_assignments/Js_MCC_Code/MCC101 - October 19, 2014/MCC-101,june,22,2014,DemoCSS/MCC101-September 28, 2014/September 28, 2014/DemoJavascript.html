@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Alerts & Variables</title>
+    <script>
+
+        /* alert & window.alert works the same way */
+
+        alert('Hello  World');
+        //window.alert('Hello  World');
+
+
+        /* variable declaration, initialization & updation */
+        //var data;
+        //alert(data);  //undefined
+        //data = 45;
+        //alert(data);
+        //data = "Hello";
+        //alert(data);
+
+        /* Re-usability (no need to write "Hello World" multiple times") */
+        //var message = "Hello World";
+        //alert(message);
+        //alert(message);
+        //alert(message);
+
+        //var data;
+        //data = "Hello World";
+        //var data = "Hello World";
+
+        //var hello;
+        //hello = 42;
+        //alert(hello);
+
+        /* Multiple variable declaration & initialization */
+        //var a, b, c;
+        //var a = 1, b = "Hello", c = 784;
+        //var a = b = c = "Pakistan";
+
+
+        /* Valid variable names */
+        var _message;
+        var $message;
+        var message;
+        var message2;
+        var hello_world_pakistan;
+
+
+        /* Invalid variable names */
+        //var 2message;
+        //var da.ta;
+        //var da-ta;
+
+
+        /* case-sensitivity */
+        //var Data = "Welcome";
+        //alert(data);
+
+
+        /* Variable names should be self-describing / self explanatory */
+        var fruits      = "Mercedes";   // incorrect way
+        var car         = "Mercedes";   // recommended way
+
+
+        /* Multiple variables can have same values */
+        var car         = "Mercedes";
+        var vehicle     = "Mercedes";
+        var vehicle     = "Truck";
+        alert(car);
+        alert(vehicle);
+
+
+        /* camel case convention */
+        var helloWorldPakistan;
+
+
+        /* Not typed language */
+        var msg;
+        msg = "Hello";
+        /* can be assigned data of different types */
+        msg = 78;
+        msg = "Pakistan";
+        msg = 4.5;
+
+
+        /* Whitespace ignorance */
+
+        /*
+        alert        (     "Hello         Pakistan"
+        )    ;
+        */
+
+        // same as
+        //alert("Hello         Pakistan");
+
+
+        /* Variable for numbers */
+        //var number = 78;
+        //var number = 78.2;
+        //var number = -5;
+
+        //var num = 5;
+        //num = num + 2;
+        //alert(num);
+
+        var age     = 20;
+        alert(age);
+        var newAge  = age + 2;
+        alert(newAge);
+
+        //var firstNumber     = "3";
+        //var secondNumber    = 7;
+        //var result          = firstNumber + secondNumber;
+        //alert(result);
+
+        // //var firstNumber     = "3";
+        //var firstNumber     = "q3";
+        //var secondNumber    = "7";
+        //var result          = firstNumber + secondNumber;
+        //alert(result);
+
+        //var anotherResult = firstNumber - secondNumber;
+        //alert(anotherResult);
+
+        //NaN
+        //Not a Number
+    </script>
+</head>
+<body>
+
+<p>This is a sample paragraph</p>
+
+</body>
+</html>

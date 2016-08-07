@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS Arrays</title>
+    <script>
+        //var student1 = "Ali";
+        //var student2 = "Sameer";
+        //var student3 = "Sami";
+
+        //var students          = ["Ali", "Sameer", "Sami"];
+
+        //var marks             = [74, 54, 80];
+        //var possibleAnswers   = [true, false, true];
+
+        //var student = "Ali";
+        var students = ["Ali", "Sameer", "Sami"];
+
+        /* document.writeln(students[0]);
+        document.writeln(students[1]);
+        document.writeln(students[2]);
+        document.writeln("<br><br>"); */
+
+
+        //var mixedArray = ["Ali", 16, 58.1, false, "A101"];
+
+        //var characters = ["p","e","a","c", "o", "c", "k"];
+
+        var characters = [];
+        characters[0] = "p";
+        characters[1] = "e";
+        characters[2] = "a";
+        characters[3] = "c";
+        characters[4] = "o";
+        characters[5] = "c";
+        characters[6] = "k";
+
+        //document.writeln(characters[0]);
+        //document.writeln(characters[1]);
+        //document.writeln(characters[2]);
+
+        //document.writeln(characters[0] + characters[1] + characters[2]);
+
+
+        /* Array literal */
+        //var names = ["Ali", "Sameer"];
+
+
+
+        /* Array Constructor */
+        //var names = new Array("Ali", "Sameer");
+
+        //var marks = [];
+        //var marks = new Array();
+
+
+
+        /* Array properties */
+        var courses = [];
+        var names   = ["Ali", "Sameer"];
+        var marks   = [20, 25, 68,75];
+        document.writeln("Length of Courses array is : "   +   courses.length);
+        document.writeln("<br>");
+        document.writeln("Length of Names array is : "     +   names.length);
+        document.writeln("<br>");
+        document.writeln("Length of Marks array is : "     +   marks.length);
+        document.writeln("<br><br>");
+
+
+        /*
+        var scores = [];
+        scores[0] = 100;
+        scores[3] = 200;
+        scores[5] = 400;
+
+        document.writeln(scores[0]);
+        document.writeln("<br>");
+        document.writeln(scores[1]);
+        document.writeln("<br>");
+        document.writeln(scores[2]);
+        document.writeln("<br>");
+        document.writeln(scores[3]);
+        document.writeln("<br>");
+        document.writeln(scores[4]);
+        document.writeln("<br>");
+        document.writeln(scores[5]);
+        document.writeln("<br>");
+        document.writeln("Length of scores array is : " +scores.length);
+        */
+
+
+        /****** ARRAY FUNCTIONS ******/
+
+        //var numbers = [2, 6, 5];
+
+        //numbers[3] = 4;
+        //numbers[numbers.length] = 4;
+        //document.writeln(numbers[3]);
+
+        /* push() */
+        //numbers.push(45);
+        //  [2, 6, 5, 45]
+
+        //numbers.push(9);
+        //  [2, 6, 5, 45, 9]
+
+        //numbers.push(45,9,32,14);
+        //document.writeln(numbers.length);
+
+
+        /* pop() */
+        var numbers = [2, 6, 5, 7];
+        document.writeln("Length of array : " + numbers.length + "<br>");
+        document.writeln("Popped element : " + numbers.pop()+ "<br>");
+        document.writeln("Popped element : " + numbers.pop()+ "<br>");
+        document.writeln("Length of array : " + numbers.length + "<br><br>");
+
+
+
+        var numbers = [2, 6, 5, 7];
+
+        /* unshift() */
+        document.writeln("Element at position 0 : " + numbers[0] + "<br>");
+        document.writeln("Unshift 9, 45, 78 <br>");
+        numbers.unshift(9,45,78);
+        document.writeln("Element at position 0 : " + numbers[0] + "<br><br>");
+
+        /* shift() */
+        document.writeln("Element at position 0 : " + numbers[0] + "<br>");
+        document.writeln("Shift " + numbers.shift() + "<br>");
+        document.writeln("Element at position 0 : " + numbers[0] + "<br><br>");
+
+        /* splice() */
+        var fruits = ["Orange", "Mango", "Banana", "Grapes"];
+        fruits.splice(2, 0, "Apple");
+        //fruits.splice(2, 1, "Apple");
+        //fruits.splice(1, 2, "Apple","Pear");
+        document.writeln(fruits[0] + "<br>");
+        document.writeln(fruits[1] + "<br>");
+        document.writeln(fruits[2] + "<br>");
+        document.writeln(fruits[3] + "<br>");
+        document.writeln(fruits[4] + "<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "video-chat-app-using-webrtc-peerjs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "budo app.js:bundle.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "budo": "^8.1.0",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "simple-peer": "^6.0.3",
+    "uniq": "^1.0.1"
+  }
+}

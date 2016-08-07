@@ -1,0 +1,168 @@
+What is Manual Testing?
+A type of software testing where testers manually execute test cases without using 
+any automation tools.
+
+Manual testing is the most primitive of all testing types and helps find bugs in 
+the software system.
+
+Any new application must be tested manually tested before its testing can be automated
+
+
+"One of the software testing fundamental is 100% automation is not possible"
+
+Goal of Manual Testing?
+The goal of manual testing is to ensure that the application free and it is working
+in conformance to the specified functional requirements.
+
+It also makes sure that reported defects are fixed by developers and re-testing has been
+performed by testers on the fixed defects.
+
+Myths of Manual Testing
+Myth: Anyone can do manual testing.
+fact: Testing requires many skill sets.
+
+Myth: Testing ensures 100% defect free product.
+Fact: Testing attempts to find as many defects as possible. Indentifying
+all possible defects is impossible.
+
+Myth: Automated testing is more powerful than manual testing.
+fact: 100% test automation cannot be done. Manual testing is also essential.
+
+Myth: Testing is easy 
+Fact: Testing can be extremely challenging. Testing an application for possible use cases
+requires high analytical skills.
+
+
+Note: Any type of application can be tested manually but automated testing is recommended only for
+stable systems and is mostly used for regression testing.
+
+Manual testing is an activity where the tester needs to be very patient, creative and open minded.
+They need to think and act with an end user perspective.
+
+
+What is black-box testing?
+Functionality of the software under test (SUT) is checked without lookin at the internal code
+structure, implementation details or knowledge of internal paths of the software.
+
+This type of testing is based on entirely on the software requirements, and specifications.
+consider an example: If we want to test OS , google-website ,oracle-db and custom applications
+
+Input -> BlackBox -> Output
+
+You can test these applications by just focusing on the inputs and outputs without 
+knowing their ,internal code implementations.
+
+Types of BlackBox-Testing
+1. Functional Testing
+	This black box testing is related to functional requirements of a system; it is done by
+software testers.
+
+2. Non Functional Testing
+	This type of black box testing is not related to testing of a specific functionality, but non-functional
+requirements such as performance , scalability, usability
+ 
+3. Regression Testing
+	Regression Testing is done after code fixes, upgrades or any other system maintenance to check the new code
+has not affected the existing code.
+
+How to perform Black Box testing??
+
+1. Initailly requirements and specifications of the system are examined.
+
+2. Tester chooses valid inputs,(positive test scenario), to check whether application
+under test processes them correctly. Also some invalid inputs(negative test scenario) are choosen to verify that the application or system
+under test is able to detect them.
+
+3. Tester determines expected output for all those inputs. 
+4. Software tester creates test cases with selected inputs.
+5. The test cases are executed.
+6. Software tester compares the actual outputs with the expected outputs.
+7. Defects if any are fixed and re-tested.
+
+Tools used for black box testing?
+a. for functional / regression tests we can use QTP. 
+b. for non-functional test we can use load-runner.
+
+Black box testing gives abstraction from code and focuses testing effort on the software system behaviour.
+
+Usually software systems are not developed in a single chunk but development is broken down different modules. Black box testing
+facilitates testing communication amongst modules via integration testing.
+
+Note: In case you push code fixes in your live software system, a complete system check(black box regression tests becomes essendtial)
+
+
+What is adhoc testing?
+Informal testing type with an aim to break the system. This testing is usually an unplanned activity.
+
+It does not follow any test design techniques to create test cases. Infact it doesn't create test cases altogether.
+In this testing no documentation/planning/process to be followed. Since this testing aims at finding defects
+through random approach without any documentation, defects will not be mapped to test cases. Most of the time it is hard to reproduce the bug.
+
+
+When execute adhoc testing?
+1. When there is limited time to do eleborative testing.
+2. Usually ADHOC testing is performed after the formal test execution and if time permits, adhoc testing can be done on the system.
+3. Adhoc testing will be effective only if the tester is knowledge of the system under test. 
+
+Types of adhoc testing
+1. Buddy Testing. Two Buddies mutually work on indentifying defects in the same module. Mostly one buddy will be from development team and another person will be from testing team.
+	Buddy testing helps the tester develop better test cases and developement team can also make design changes early. This activity performs after unit test.
+2. Pair Testing
+	Two testers are assigned modules share ideas and work on the same machines to find defects. One person can execute the tests and another person can take notes on the findings.
+Comparison Buddy vs Pairing
+- Buddy testing is combination of unit and system testing together with developers and testers.
+- Pair testing is done only with the testers with different knowledge levels.(Experienced and non experienced to share their ideas and views).
+
+3. Monkey Testing
+	Randomly test the produce or application without test cases with a goal to break the system.
+
+Keypoints of adhoc
+1. Checks for the completeness of testing.
+2. Defects catching adhoc test cases are added to planned test cases.
+3. Save time as no formality is required.
+ 
+What is automated testing?
+Automation testing means using an automation tool to execute your test case suite.
+The automation software can also enter test data into the system under test, compare expected and actual results and generate
+detailed test reports.
+
+Goal of automation?
+ To reduce the number of test cases to be run manually and not eliminate manual testing all together.
+
+Why automation testing?
+1. Manual testing of all work flows, all fields, all negative scenarios is time and cost consuming.
+2. It is difficult to test for multilingual sites manually.
+3. Automation does not require human intervention. You can run automated unattended(overnight).
+4. It increses speed of test execution and test coverage.
+
+Which test cases to automate?
+1. Test cases that are executed repeatedly.
+2. Test cases that are very tedious or difficult to perform manually.
+3. Test cases which are time consuming.
+4. High risk-Business critical test cases.
+
+Which scenarios are not suitable for automated?
+1. Test cases that are newly designed and not executed manually atleast once.
+2. Test cases for which the requirements are changing frequently.
+3. Test cases which are executed on an adhoc basis
+
+Automation Process
+1. Test tool selection:Test tool selection largely depends on the technology the application under test is built on.
+For instance QTP does not support informatica. So, QTP cannot be used for testing informatica applications.
+
+2. Define scope of automation: Scope of automation is the area of your application under test which will be automated.
+3. Planning, Design and Development: During this phase you create automation strategy and plan.
+4. Test Execution: Automation scripts are executed during this phase.
+5. Maintenance: As new functionalities are added to the system under test with successive cycles, automation scripts need to be added, reviewed and maintained for each release cycle.
+
+Automation Tools
+-QTP: It is the market leader in functional testing tool
+-Rational Robot: It is an IBM tool used to automate regression, functional and configuration tests.
+-Selenium: Its an open source web automation tool.
+
+Note: Testing tool selection is very important for automation. Selection tool based on requirements not on the basis of popularity.
+
+Unit testing
+Integration testing
+System testing
+Acceptance testing(fulfills the client requirements)

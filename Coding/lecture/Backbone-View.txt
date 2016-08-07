@@ -1,0 +1,103 @@
+Backbone-Views
+Views are the interface in both direction between html doc. and backbone model.
+
+View->Model
+View->DOM
+
+View depends on model ,models triger events that view can handle
+View depends on Dom ,DOM triger events that view can handle
+
+Provide the glue between models and the document
+Handle model events
+Handle DOM events
+All views have an associated DOM element at all times(.el)
+
+Syntax for defining view
+var DummyView=Backbone.View.extend({
+	//properties
+})
+
+The new element is defined by the id,tagName,className and attributes
+Example#1
+var View=Backbone.View.extend({
+	tagName:'li',
+	id:'thing',
+	class:'active',
+	attributes:{
+		'data-values':12345
+	}
+})
+
+var viewObj=new View();
+$('body').prepend(viewobj.el);
+
+Example#2
+
+var v=Backbone.View.extend({})
+var vObj=new v();
+v.$el.css('background-color','green');
+
+
+Any of the following properties will be attached directly to the view object if 
+passed to the constructor
+i.e model,collection,el,id,className,tagName,attributes
+
+Example#3
+
+var Demo = Backbone.Model.extend({});
+var demoObj=new Demo();
+demoObj.set('content','This is the test case of views');
+
+var DemoView= Backbone.View.extend({});
+var demoViewObj=new DemoView({
+	model:demoObj,
+	className:'model-object'
+});
+$('body').prepend(demoViewObj.el);
+
+el,$el,this.$ Property
+
+All views have an el property that references the views DOM element
+
+var v = new Backbone.view({el:'body'});
+console.log(v.el)
+console.log(v.$el)
+this.$('selector') is equivalent to this.$el.find('selector');
+$el returns an array
+
+Render
+ Render is the function that render's the views element(.el)
+
+Pass the model to the view's constructor
+var v=new({
+	model:myModel
+})
+
+Bind the view's render method
+myModel.on('change',function(){
+})
+
+One model can provide data to many views
+
+Example:Refreshing-View
+var RefreshingView=Backbone.View.extend({
+	initialize:function(){
+	this.model.on('change',function(){
+		this.render();
+
+	},this)	
+},
+	render:function(){
+		this.$el.html(this.model.get('text'));
+	}
+})
+
+var m=new Backbone.Model({text:new Date().toString()});
+var v=new RefreshingView({model:m,el:'body'});
+v.render();
+setInterval(function(){
+ m.set({text:new Date().toString()})
+},1000);
+
+Make :// Make method is used to create template without using template;
+$el.remove() //It is used to remove the element from the document

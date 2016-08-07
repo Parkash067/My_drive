@@ -1,0 +1,61 @@
+h1{
+        font-family: Cursive;
+        padding:15px;
+        margin-top:0px;
+        border-bottom:1px solid #333;
+        position: relative;
+        }
+        h1:first-letter{
+        background-color:royalblue;
+        width:15px;
+        color:white;
+       padding-left:7px;
+        padding-right:7px;
+        text-transform: uppercase;
+        }
+        body{
+         margin:0px;
+       
+        }
+        #hor-minimalist-a 
+        {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 12px;
+            background: #fff;
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: left;
+            margin: 20px;
+        }
+        #hor-minimalist-a th {
+            font-size: 14px;
+            font-weight: normal;
+            color: royalblue;
+            border-bottom: 2px solid royalblue;
+            padding-top:10px;
+            
+        }
+        .icon{
+            max-width: 100%;
+            width:5%;
+            height: auto;
+            position: absolute;
+            top: 2px;
+            margin-left: 15px;
+        }
+        .container{
+        max-width:100%;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:50px;
+        
+        }
+        span{
+            float: right;
+            margin-right: 6px;
+            margin-top: -12px;
+            color: royalblue;
+            font-family: cursive;
+            font-size: 14px;
+        }

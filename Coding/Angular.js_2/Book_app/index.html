@@ -1,0 +1,59 @@
+<html>
+
+  <head>
+    <title>My_App</title>
+
+    <!-- 1. Load libraries -->
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+<link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+   <!--  <hello-world>Loading...</hello-world>-->
+         <!-- Menu Bar -->
+    <div class="ui menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="resources/images/ng-book-2-minibook.png">
+          ng-book 2
+        </a>
+        <div class="header item borderless">
+          <h1 class="ui header">
+            Angular 2 Simple Reddit
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui main text container">
+      <reddit>Loading...</reddit> <!-- <--- Our app loads here! -->
+    </div>
+    <br><br><br><br><br>
+    <reddit-article>
+ </reddit-article>
+  </body>
+
+</html>

@@ -1,0 +1,10 @@
+Angular-II
+
+Architecture of angular application 
+
+Angular-II is based on components and components are based on html 
+ and some css .. There are also components.... which are logically 
+attached knowns as directives...
+
+Methods of connecting components
+one is selector and other is routing

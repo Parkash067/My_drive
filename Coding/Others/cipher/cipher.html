@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cipher</title>
+</head>
+<script>
+
+
+
+    function encrypt()
+    {
+        plaintext = document.getElementById('txt').value.toLowerCase();
+
+        key = 3;
+        ciphertext = "";
+        re = /[a-z]/;
+        for(var i=0; i<plaintext.length; i++)
+        {
+            if(re.test(plaintext.charAt(i))) ciphertext += String.fromCharCode((plaintext.charCodeAt(i) - 97 + key)%26 + 97);
+
+            else ciphertext += plaintext.charAt(i);
+        }
+        document.getElementById('decrypt').innerHTML="<input type='button' value='Decrypt' onclick='decryption()'>";
+        document.getElementById('outputscreen').value=ciphertext;
+
+
+    }
+
+
+    // decription
+    function decryption()
+    {
+        plaintext2 = "";
+        for(i=0; i<ciphertext.length; i++)
+        {
+            if(re.test(ciphertext.charAt(i))) plaintext2 += String.fromCharCode((ciphertext.charCodeAt(i) - 97 + 26 - key)%26 + 97);
+            else plaintext += ciphertext.charAt(i);
+        }
+document.getElementById('outputscreen').value=plaintext2;
+    }
+   /*
+*/
+
+
+   // alert(plaintext2);
+
+    /* var str="megabuck";
+     var plaintxt="hello my name is pakistan";
+    // str.sort(function(a, b){return a-b});
+    // str=str.sort();
+     //alert(str);
+     var ary=[];
+     for(var i=0; i<str.length;i++)
+     {
+
+         ary.push(str.toUpperCase().charCodeAt(i));
+
+         document.writeln(str[i]);
+
+      }
+     document.writeln("<br>");
+    // ary.sort(function(a, b){return a-b});
+     for (var j=0;j<ary.length;j++)
+     {
+         document.writeln(ary[j]);
+     }*/
+//alert(str[0]);
+   /* for(var j=0;j<ary.length;j++)
+    {
+        document.writeln(String.fromCharCode(ary[j]));
+    }
+*/
+   //alert(String.fromCharCode(ary[0]));
+   // alert(str.indexOf(" "));
+
+</script>
+<body>
+<label>Plain Text</label><br><input type="text" id="txt">
+<br>
+<br>
+<br>
+<input type="button" value="Encrypt" onclick="encrypt()"><span id="decrypt"></span> <br>
+<textarea cols="40" rows="10" id="outputscreen"></textarea>
+</body>
+</html>

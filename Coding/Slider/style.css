@@ -1,0 +1,324 @@
+#maindiv{
+    max-width: 100%;
+    min-width: 1500px;
+    height: auto;
+    -moz-width:1500px;
+}
+                    /*header css*/
+header{
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    color: #ffffff;
+    margin: 0%;
+    padding: 1% 0% 2% 0%;
+    text-align: center;
+    font-family: georgia;
+    font-weight: normal;
+    font-style: italic;
+}
+                 /*Header End here*/
+
+                /*Search bar css start here*/
+#searchbar
+{
+max-width: 100%;
+width: 50%;
+height: auto;
+float: left;
+}
+#search input[type="text"] {
+    /* background: url(search-dark.png) no-repeat 10px 6px #444;*/
+    background: #333;
+    /* background: rgba(0, 0, 0, 0.5);*/
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color:#ffffff;
+    width: 150px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+
+}
+#search input[type="text"]:focus {
+    width: 35%;
+}
+                    /*Search bar css ends here*/
+
+                    /*Small menu css start here*/
+#nav1{
+
+    width: 50%;
+    height: auto;
+    float: right;
+    /*float: left;*/
+}
+#nav1 ul li{
+    display: inline;
+    padding-right:2%;
+    float: right;
+    text-decoration: none;
+}
+                /*Small menu css ends here*/
+#nav2{
+
+    /*max-width: 100%;*/
+    margin-top: 0%;
+    width: 270px;
+    height: auto;
+    margin-left:0%;
+    float: left;
+    background-color: #204d74;
+    /*display: inline;
+   /* display: inline;*/
+}
+                /*Main navigation css start here*/
+.navigation {
+    background: #fff;
+    overflow: hidden;
+
+    width: 250px;
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+
+}
+.navigation li {
+    width: 100%; border-left: 5px solid #666;
+    /* float: left;*/
+    /*cursor: pointer;*/
+    list-style-type: none;
+    padding: 8px 4px 8px 4px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+.navigation li h2 {
+    font-family: georgia;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 16px;
+}
+
+.navigation li p{
+    font-size: 11px;
+    color: #999;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+}
+.navigation li:hover {
+    background: #333;
+    border-left: 5px solid #000;
+}
+
+.navigation li:hover h2 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.navigation li:hover p {
+    color: #ccc;
+    padding-left: 5px;
+}
+.navigation li a{
+    color: #333;
+}
+.navigation li:hover a {
+    color: #ccc;
+    padding-left: 5px;
+    text-decoration: none;
+}
+                    /*main navigation bar css ends here*/
+
+                    /*slider css start*/
+/*#slider
+{
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+   /* margin: 0% 2% 5% 2% ;
+    display: inline;
+    margin: 0%;
+
+*/
+.customcontainer
+{
+    max-width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordian {
+    max-width: 100%;
+    width: 73%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+margin-left: 1em;
+
+    /*float: right;
+    margin-top:0;
+    /*margin: 40% 0% 0% 26%;*/
+   /* margin-left: 24%;
+    /*padding-bottom: 5%;*/
+   /* margin-top: -44%;*/
+
+    /*display: inline;*/
+
+    /*display: inline;*/
+
+    /*Time for some styling*/
+    /*margin: 50px 100px;*/
+    /*margin-top: 1%;*/
+    margin-right: 0%;
+    box-shadow: 0 0 1px 10px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+    width: 100%;
+    /*This will give ample space to the last item to move
+    instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+    position: relative;
+    display: block;
+    width: 112px;
+    float: left;
+    color: #ffffff;
+
+    border-left: 1px solid #888;
+
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+    /*Transitions to give animation effect*/
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    /*If you hover on the images now you should be able to
+    see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 30px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 560px;}
+
+
+.accordian li img {
+    display: block;
+}
+
+/*Image title styles*/
+.image_title {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 560px;
+
+}
+/*.image_title a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+}*/
+                /*slider css ends*/
+
+#content
+{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.pset{
+
+    color: #333;
+    font-size: 1.2em;
+   text-justify: auto;
+
+
+}
+span{
+    text-transform: capitalize;
+    font-size: 2.8em;
+}
+.btn{
+
+    margin-left: 38% !important;
+    /*margin-right: 40% !important;*/
+}
+#annoucement{
+    max-width: 100%;
+    width: 60%;
+    background-color:#333;
+    /*opacity: 0.8;*/
+    margin: 1% 0% 0% 30%;
+    border: 3px solid #ffffff;
+    border-radius:10px ;
+    color: #ffffff;
+    text-align: center;
+}
+footer{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    background-color: #333;
+    color: #ffffff;
+    margin-top: 2%;
+}
+
+
+footer ul li {
+    display: inline;
+    margin: 3% 4% 3% 4%;
+    padding: 3% 4% 3% 2%;
+}
+footer p {
+    text-align: center;
+}
+/*#my{
+
+    width: 100%;
+    height: auto;
+    background-color: #ffff00;
+}*/
+#myslider
+{
+    width: 75%;
+    max-width: 100%;
+    height: auto;
+    /*
+    float: right;*/
+}
+/*#pagesetting{
+
+    max-width: 100%;
+    min-width:1100px;
+    background-color: #333;
+    padding: 0%;
+    min-width: 500px;
+    position: relative;
+}
+*/

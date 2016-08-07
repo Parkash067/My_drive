@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function initialize(){
+            var paragraphs = document.getElementsByTagName('p');
+            alert("all paragraphs : " + paragraphs.length);
+
+            var container = document.getElementById('ny');
+            var paragraphs = container.getElementsByTagName('p');
+            alert("paragraphs inside second div : " + paragraphs.length);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse.</p>
+    </div>
+</body>
+</html>

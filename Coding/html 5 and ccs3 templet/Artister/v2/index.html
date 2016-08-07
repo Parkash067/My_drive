@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- CSS files -->
+    <link rel="stylesheet" href="./css/style-new.css" media="screen" />
+    <link rel="stylesheet" href="./css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./css/prettyPhoto.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./css/dropdown-new.css" type="text/css" media="screen" />
+
+
+<!-- SLIDER and various needed JS files -->    
+    <script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.cycle.all_9bc22cbd.js"></script>
+    <script type="text/javascript" src="./js/jquery.nivo.slider.pack_9bc22cbd.js"></script>
+	<script type="text/javascript" src="./js/jquery.prettyPhoto.js"></script>
+
+<!-- for CUFON JS files --> 
+	<script src="./js/cufon-yui.js" type="text/javascript"></script>
+	<script src="./js/Rokkitt_400.font.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		Cufon.replace('h2, h3, h4, .welcome h3, ul.menu li a, li.submenu span, .menu span, span.buynow-btn a, span.payoff ', { hover: true, });
+	</script>
+
+<!-- for DROPDOWN JS files --> 
+    <script type="text/javascript" src="./js/dropdown.js"></script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-393684-3']);
+		_gaq.push(['_setDomainName', '.scriptiny.com']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+    </script>
+
+<title>artister xhtml</title>
+<meta charset="UTF-8"></head>
+
+<body>
+
+<div id="container">
+<div id="in-container">
+
+<!-- START header -->
+    <div id="header">
+    
+    <!-- LOGO + PAYOFF -->
+    	<div id="logo">
+        <img src="./images/logo-artister.png" alt="logo" />
+        </div>
+        <span class="payoff">
+        A premium xhtml theme by jimbox
+        </span>
+
+        
+    <!-- TOP MENU -->
+        <div class="nav">
+            <ul id="menu" class="menu">
+                <li class="nodiv"><a href="#">Home</a></li>
+                <li><a href="#">About</a>
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+        
+                        <li class="submenu">
+                            <a href="#">Three</a>
+                            <ul>
+                                <li class="noborder"><a href="#">One</a></li>
+                                <li><a href="#">Two</a></li>
+                                <li><a href="#">Three</a></li>
+                            </ul>
+        
+                        </li>      
+                    </ul>
+                </li>
+                <li><span>Portfolio</span>
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+        
+                        <li class="submenu">
+                            <span>No Link</span><ul>
+                                <li class="noborder"><a href="#">One</a></li>
+                                <li><a href="#">Two</a></li>
+                                <li><a href="#">Three</a></li>
+                                <li><a href="#">Four</a></li>
+        
+                                <li><a href="#">Five</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Five</a></li>
+                        <li><a href="#">Six</a></li>
+                    </ul>
+                </li>
+        
+                <li><a href="#">Blog</a>
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </li>
+        
+                <li><a href="#">Resources</a>
+                    <ul id="info">
+                        <li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nulla, malesuada in porta vitae, fermentum ac nulla.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+        </div>
+        <script type="text/javascript">
+        var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+        </script>    
+
+        
+    </div>
+<!-- END header -->   
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){	
+		jQuery('#images-slider').cycle({ 
+		fx:      'growY', // transition type
+		speed:    600, 
+		timeout:  5000,
+		cleartype: false,   //  Fixes the issue with IE6+
+		startingSlide: 0,
+		next: '#cycle-next',
+		prev: '#cycle-prev'
+		});	
+		});			
+    </script>
+    
+    
+<!-- START slider -->
+	<div id="featured">
+		<ul id="images-slider">
+			<li><img src="./images/slider/slider-3.png" width="930" height="355" alt="slide img" />
+                <!-- slider text -->
+                <div class="caption">
+                    <h3>Artister lorem istant</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida. Integer convallis ipsum </p>
+                </div><!-- end caption -->
+			</li>
+			<li><img src="./images/slider/slider-4.png" width="930" height="355" alt="slide img" />
+                <!-- caption text -->
+                <div class="caption">
+                    <h3>Lorem istant setup asap</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.</p>
+                </div><!-- end caption -->
+			</li>	
+	    </ul>
+				
+				<ul id="slider-cycle-nav">
+					<li><a id="cycle-prev"></a></li>
+					<li><a id="cycle-next"></a></li>
+
+				</ul>
+	</div><!-- END slider -->
+        
+ 
+	<div class="separator"></div>
+
+
+<!-- START welcome box -->
+ 	<div class="welcome">
+    	<div class="welcome-l">
+            <h3>This is <span class="orange">Aristerweb</span> - a Premium portfolio xhtml theme</h3>
+            <p>Lorem ipsum dolor sit amet, consecadipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis loborti gravida. Integer convallis. istant comet appreciate</p>
+        </div>
+        <div class="welcome-r"><span class="buynow-btn"><a href="">buy now</a></span></div>
+    </div>
+<!-- END welcome box -->
+
+    
+<div class="separator"></div>
+
+<!-- CENTER home --> 
+<div class="home-center"> 
+
+<!-- LEFT column -->             
+    <div class="nav-home">
+    	<div class="nav-widget">
+            <h3>our mission</h3>
+            <span class="nav-subtitle">Lorem ipsum dolor sit amet dipiscing elit. Duis nec purus</span>
+            <span class="read-more"><a href="">Read All</a></span>
+        </div>
+    </div>
+
+
+<!-- CENTER column --> 
+    <div class="home-content">
+		<div class="services">
+        <h3><img src="./images/ico-design.png" width="32" height="32" alt="icon" />We designs</h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis conse cadipiscing elit.</p>
+        </div>
+        
+		<div class="services">
+        <h3><img src="./images/ico-communication.png" width="32" height="32" alt="icon" />Communicate</h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis conse cadipiscing elit.</p>
+        </div>
+        
+		<div class="services last">
+        <h3><img src="./images/ico-security.png" width="32" height="32" alt="icon" />Your security</h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis conse cadipiscing elit.</p>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- END CENTER home -->
+
+<div class="separator"></div>
+
+<!-- CENTER home --> 
+<div class="home-center"> 
+
+<!-- LEFT column -->             
+    <div class="nav-home">
+    	<div class="nav-widget">
+            <h3>latest works</h3>
+            <span class="nav-subtitle">Lorem ipsum dolor sit amet dipiscing elit. Duis nec purus</span>
+            <span class="read-more"><a href="">Read All</a></span>
+        </div>
+    </div>
+
+
+<!-- CENTER column --> 
+<div class="home-content">
+
+<div class="works">
+
+    <ul class="gallery clearfix">
+        <li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/work-img1.jpg" alt="work" /></a>
+        <h3><a href="">Lorem ipsum sit</a></h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus </p></li>
+        
+        <li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/work-img2.jpg" alt="work" /></a>
+        <h3><a href="">Lorem ipsum sit</a></h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus </p></li>
+
+        <li class="last"><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/work-img3.jpg" alt="work" /></a>
+        <h3><a href="">Lorem ipsum sit</a></h3>
+        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Duis nec purus </p></li>
+	</ul>
+    
+</div>
+
+
+</div>
+<!-- END CENTER home -->
+
+</div>
+</div>
+</div>		
+<!-- END CONTAINER -->	
+
+    
+<!-- FOOTER -->    
+    <div id="footer">
+    
+    <div class="fot-cont">
+    
+	<!-- FIRST FOOTER WIDGET -->  
+    	<div class="footer-widget">
+   	   		<img src="./images/footer-logo.png" alt="logo" class="footer-logo" />
+         	<p class="footer-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that </p>
+            <span class="footer-social">
+            	<a href=""><img src="./images/ico-fb.png" width="32" height="32" alt="icon" /></a>
+                <a href=""><img src="./images/ico-rss.png" width="32" height="32" alt="icon" /></a>
+                <a href=""><img src="./images/ico-twitter.png" width="32" height="32" alt="icon" /></a>
+            </span>
+        </div>
+    
+	<!-- SECOND FOOTER WIDGET -->
+    	<div class="footer-widget"><h4>Flickr stream</h4>
+			<ul class="flickr-gallery gallery clearfix">
+            	<li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr1.jpg" alt="work" /></a></li>
+				<li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr2.jpg" alt="work" /></a></li>
+                <li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr3.jpg" alt="work" /></a></li>
+            	<li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr1.jpg" alt="work" /></a></li>
+				<li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr2.jpg" alt="work" /></a></li>
+                <li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr3.jpg" alt="work" /></a></li>
+				<li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr2.jpg" alt="work" /></a></li>
+                <li><a href="./images/slider/slider-3.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures."><img src="./images/flickr3.jpg" alt="work" /></a></li>
+
+
+            </ul>
+        </div>
+        
+	<!-- THIRD FOOTER WIDGET -->
+    	<div class="footer-widget last"><h4>Latest news from our blog</h4>
+			<ul class="latest-news-footer">
+            	<li><a href="">Mauris sit amet metus eget dolor sit amet</a>
+                It is a long established fact that a reader will be distracted by the readable content of a page [...]</li>
+                <li><a href="">Mauris sit amet metus eget dolor sit amet</a>
+                It is a long established fact that a reader will be distracted by the readable content of a page [...]</li>
+                <li><a href="">Mauris sit amet metus eget dolor sit amet</a>
+                It is a long established fact that a reader will be distracted by the readable content of a page [...]</li>
+            </ul>
+        </div>
+
+<span class="bot-fot-left">Copyright &copy; 2011 Artister. All rights reserved</span>
+<span class="bot-fot-right"><a href="">home</a><a href="">about</a><a href="">feed rss</a><a href="">news</a><a href="">contact</a></span>
+	
+    </div>
+    </div>
+<!-- END FOOTER -->  
+
+    
+    		
+			<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+			</script>
+            
+<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+ 
+</body>
+</html>

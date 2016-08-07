@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+#mobiles
+{
+	float:left;
+	width: 80%;
+	height:auto;
+/*	height: 500px;*/
+	background-color:#FFF;
+	
+}
+
+#cellphones
+{
+	border-radius:2px;
+	border-collapse:separate;
+	width:90%;
+	border-spacing:30px;
+	border:hidden;
+	}
+.mob
+{
+	background-color:#ce1e20;
+	color:#FFF;
+	width:100%;
+	margin-left:10px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:3px;
+	font-size:14px;
+	cursor:pointer;
+	
+}
+.cell
+{
+	max-width:100%;
+	height:auto;
+	width:60px;
+	margin-top:5px;
+	margin-bottom:10px;
+	
+
+}
+#cellphones
+{
+	margin-left:20px;
+}
+.m
+{
+	font-size:14px;
+
+	
+}
+tr
+{
+	border-right:5px;
+}

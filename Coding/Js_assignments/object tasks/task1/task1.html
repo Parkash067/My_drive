@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>To list all names of properties</title>
+    <script>
+        var obj={
+            name:"parkash",
+            class:"VI",
+            rollno:067
+        };
+        var listofprop=[];
+        for(var prop in obj)
+        {
+            //listofprop.push(obj[prop]);
+            listofprop.push(prop);
+        }
+        for(var display in listofprop)
+        {
+            document.writeln(listofprop[display]+"<br>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

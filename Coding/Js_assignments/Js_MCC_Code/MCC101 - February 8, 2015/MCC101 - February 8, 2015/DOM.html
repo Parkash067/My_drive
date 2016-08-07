@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body id="body">
+
+    <div id="div1"><p> Paragraph 1</p><p> Paragraph 2</p><p> Paragraph 3</p>
+        <!--<p> Paragraph 4</p>-->
+    </div>
+
+   <!-- <script>
+        var para4 = document.createElement("p");
+        var txtNode = document.createTextNode("Sample text goes here");
+        para4.appendChild(txtNode);
+
+       /* var thirdPara = document.getElementById("div1").childNodes[2];
+        console.log(thirdPara);
+
+        var parentDiv = document.getElementById("div1");
+
+        //parentDiv.appendChild(para4);
+        parentDiv.insertBefore(para4, thirdPara);
+
+
+
+        var nodeToRemove = parentDiv.firstChild;
+        parentDiv.removeChild(nodeToRemove);*/
+
+
+    </script>
+-->
+
+
+
+
+
+
+<script>
+    var paragraph = document.createElement("p");
+    var txtNode = document.createTextNode("Sample text goes here");
+    paragraph.appendChild(txtNode);
+
+    //paragraph.setAttribute("id","p1");
+
+    document.getElementById("body").appendChild(paragraph);
+    //console.log(paragraph);
+
+
+   /* var inputField = document.createElement("input");
+    inputField.setAttribute("type","text");
+    document.getElementById("body").appendChild(inputField);
+
+    var btn = document.createElement("input");
+    btn.setAttribute("type","button");
+    btn.setAttribute("value","Save");
+    document.getElementById("body").appendChild(btn);*/
+</script>
+</body>
+</html>

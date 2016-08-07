@@ -1,0 +1,43 @@
+header{
+        font-family: Arial, Verdana, sans-serif;
+        padding:25px;
+        padding-bottom: 30px;
+        margin-top:0px;
+        border-bottom:1px solid #333;
+        background-color: black;
+        font-size: 32px;
+        color: whitesmoke; 
+        height: 3em;
+}
+
+        #heading:first-letter{
+            box-shadow: 0px 0px 30px whitesmoke;
+        background-color:red;
+        width:12px;
+        color:white;
+       padding-left:7px;
+        padding-right:7px;
+        text-transform: uppercase;
+        }
+        body{
+         margin:0px;
+       font-family: Arial, Verdana, sans-serif;
+        color: #111111;
+        }
+     
+        img{
+            
+           
+            max-width: 100%;
+            width: 7%;
+            height: auto;
+           
+          
+        }
+
+.navbar-nav{
+        margin-left: 6em !important;
+}
+.navbar-right{
+    float: right
+}

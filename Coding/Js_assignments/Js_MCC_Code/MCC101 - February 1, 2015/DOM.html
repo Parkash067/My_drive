@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Simple document</title>
+</head>
+<body>
+    <div>
+        <p>
+            This is
+            <em>important</em>
+            !
+        </p>
+        <p id="paragraph1">
+            Nor to this.
+        </p>
+    </div>
+
+    <script>
+        var txt = document.getElementById('paragraph1').innerText;
+        alert(txt);
+
+        document.getElementById('paragraph1').innerText = "Updated text";
+        //document.getElementsByTagName('p')[1].innerText = "Updated text";
+
+        //alert("Paragraph 1 children"  + document.getElementsByTagName('p')[0].childNodes.length);
+    </script>
+</body>
+</html>

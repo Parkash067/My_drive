@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>data structures</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+    var num1=-3;
+    var num2=4;
+    alert(Math.sqrt(num2));
+    alert(Math.abs(num1));
+
+ var num=3.1423567;
+ alert(num.toFixed(2));
+ var num=1;
+ var sum=0;
+ while(num<11)
+ {
+ sum+=num;
+ num++;
+ alert(sum);
+ }
+ /*print(sum);*/
+
+/*function factorial(number){
+ var product=1;
+ for(var i=number;i>=1;i--)
+ {
+ product=product*i;
+ }
+ return product;
+
+ }
+ var result=factorial(5);
+ document.writeln(result);*/
+/*
+ function increament_in_arr(arr,num){
+     for(var i=0;i<arr.length;i++)
+     {
+         arr[i] +=num;
+     }
+     return arr;
+ }
+    var arr=[3,4,5,6,9];
+    var num=4;
+    var result=increament_in_arr(arr,num);
+    document.writeln(result);
+*/
+
+    //factorial through recursion
+function factorial(num)
+{
+    if(num==1)
+    {
+       // return document.writeln("value is "+num);
+
+        return num;
+
+    }
+    else{
+       return (num * factorial(num-1));
+
+    }
+
+}
+//ar numb=5;
+    document.writeln(factorial(5));
+
+
+
+
+
+
+
+</script>
+</html>

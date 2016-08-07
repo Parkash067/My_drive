@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultipleComponent&Properties</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<script type="text/jsx">
+ var DemoComponent=React.createClass({
+     render:function(){
+         return(
+                 <h1>My name is {this.props.name} and I like to eat {this.props.dish}</h1>
+         );
+     }
+ });
+    React.render(
+            <div>
+                <DemoComponent name="parkash" dish="Biryani"/>
+                <DemoComponent name="zain" dish="Cake" />
+                <DemoComponent  name="Hadi" dish="Burger"/>
+            </div>
+            ,document.getElementById('content'));
+
+</script>
+</body>
+</html>

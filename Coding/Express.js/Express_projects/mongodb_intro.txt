@@ -1,0 +1,15 @@
+Intro of Mongodb?
+
+MongoDB stores data in the form of documents, which are JSON-like field and value pairs.
+ (e.g. dictionaries, hashes, maps, and associative arrays).like
+	
+	{
+		name:"parkash",
+		age:20,
+		sex:"male"
+	}
+
+MongoDB stores all documents in collections.A grouping of MongoDB documents.
+A collection is the equivalent of an RDBMS table.
+
+for more visit:https://docs.mongodb.org/manual/core/crud-introduction/

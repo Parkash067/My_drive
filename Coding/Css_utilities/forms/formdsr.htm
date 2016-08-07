@@ -1,0 +1,149 @@
+<html>
+<head>
+<style>
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	/*background-image: url(http://cdn.desktopwallpapers4.me/wallpapers/photography/1680x1050/2/18399-park-with-the-view-of-the-night-city-1680x1050-photography-wallpaper.jpg);
+	*/
+background:url(http://freehdwallpaper.net/wp-content/uploads/2015/12/san-diego-skyline-at-night-wallpaper.jpg);
+
+	background-size: cover;
+	-webkit-filter: blur(0.3px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(90%,rgba(0,0,0,0.45))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.9;
+}
+
+
+#form{
+	background:white;
+	
+	background: transparent; 
+	margin:11% 33% 10% 15%;
+}
+
+input[type='text']{
+	margin-left: 15px;
+	width:150px;
+	height:50px;
+	margin-bottom: 11px;
+	font:900 18px arial;
+	color:white;
+	padding:10px 10px;
+	border-radius:20px;
+	border:2px solid skyblue;
+	transition: all 0.4s linear;
+	background:transparent;
+
+}
+
+
+#email , #password{
+	margin-left: 15px;
+	width:320px;
+	height:50px;
+	margin-bottom: 11px;
+	font:700 18px arial;
+	color:white;
+	padding:10px 10px;
+	border-radius:20px;
+	border:2px solid skyblue;
+	transition: all 0.4s linear;
+	background:transparent;
+}
+
+
+ #password:focus{
+
+	width:355px;
+	border-radius: 25px;
+}
+
+#email:focus{
+
+	width:355px;
+	border-radius: 25px;
+}
+
+input[type='text']:focus{
+-moz-filter: blur(15px);
+	width:170px;
+	border-radius: 22px;
+}
+
+input[type='button']{
+
+	background:skyblue;
+	border-radius: 5px;
+	width:207px;
+	height:45px;
+	padding:7px 7px;
+	color:white;
+	font:700 19px arial;
+	transition:all 0.4s ease-in-out;
+	text-align: center;
+margin-left:65px; 
+}
+
+input[type='button']:hover{
+	width:320px;
+	background: #CC6666;
+	color:skyblue;
+	border-radius: 20px;
+	font:arial 300 21px;
+	text-decoration: underline;
+	margin-left: 8px;
+}
+
+#answer{
+	color:orange;
+	font:300 20px arial;
+
+}
+
+h1{
+
+	color:white;
+	font:400 22px century;
+	margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<div class="body">
+<div class="grad">
+
+<form id="form">
+
+<input type="text" placeholder="Firstname" id="fname">
+
+<input type="text" placeholder="Lastname" id="lname">
+<br>
+<input type="text" placeholder="E-mail" id="email">
+<br>
+<input type="password" placeholder="Pasword" id="password">
+<br>
+<input type="button" value="signup" onclick="calculate()">
+<br>
+</form>
+</div></div>
+</body>
+</html>
+

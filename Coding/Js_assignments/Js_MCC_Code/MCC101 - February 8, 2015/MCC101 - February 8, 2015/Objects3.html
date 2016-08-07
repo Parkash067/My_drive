@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function User( username, coursename,age ){
+            this.name = username;
+            this.course = coursename;
+            this.age    = age;
+        }
+
+        User.prototype.university = "SSUET";
+        var user1 = new User("Ali", "MCC-101",21);
+
+        alert(user1.university);
+
+        User.prototype.study = function(){
+            alert(this.name + " studies");
+        }
+
+
+        user1.study();
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

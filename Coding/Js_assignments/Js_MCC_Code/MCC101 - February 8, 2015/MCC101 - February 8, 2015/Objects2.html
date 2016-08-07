@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       /* var user = {};
+        var user = new Object();
+
+
+        var user1 = {
+            name : "Ali",
+            class : "MCC-101"
+        }
+
+        var user2 = {
+            name : "Sami",
+            class : "MCC-201"
+        }
+*/
+
+        function User( username, coursename,age ){
+            this.name = username;
+            this.course = coursename;
+            this.age    = age;
+            this.study = function(){
+                alert("User studies");
+            }
+        }
+
+        var users = [];
+        var user1 = new User("Ali", "MCC-101",21);
+
+        users.push(user1);
+
+        var user2 = new User("Sami", "MCC-201");
+        users.push(user2);
+//alert(users[0]);
+        //alert(user1.name);
+        //alert(user1.course);
+        //user1.study();
+
+
+      /*  var hasAge = "age" in user1;
+        alert(" User has age : " + hasAge);*/
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

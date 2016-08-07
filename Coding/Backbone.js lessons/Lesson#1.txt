@@ -1,0 +1,5 @@
+client-side backbone.js application
+=> Routers(urls)
+=>views(rendering of models / html files)
+=>Models(Our data)
+=>Collections(group of models)

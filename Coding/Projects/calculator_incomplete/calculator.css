@@ -1,0 +1,66 @@
+table{
+    border-collapse: collapse;
+    margin-right: auto;
+
+    margin-left: auto;
+
+
+}
+tr{
+    border-collapse: collapse;
+
+
+
+}
+td
+{
+}
+.button
+{
+    width: 80px;
+    height: 65px;
+    background-color: lightgray;
+
+}
+#screen
+{
+    width: 300px;
+    padding: 13px;
+    font-size: 18px;
+
+}
+#main
+{
+    max-width: 100%  /*background-color: lavender;*/
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#cal
+{
+    width: 630px;
+    height: 352px;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+
+    box-shadow: 0px 10px 20px #777777;
+padding: 20px;
+border-radius: 5px;
+
+}
+body{
+    margin-top: 0px;
+    background-color: lavender;
+}
+#free
+{
+    width: 244.5px;
+}
+#clear
+{
+    width: 80px;
+
+}

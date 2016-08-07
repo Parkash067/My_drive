@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Conversions & Date </title>
+	<script>
+		 //var age = prompt("Enter your age");
+		 //var age = "16abc";
+		// var age = "2.3abc";
+		/* ageInt = parseInt(age);
+		 ageFloat = parseFloat(age);
+		 document.writeln("<br>" + "Age = " + age + " , type : " + typeof age);
+		 document.writeln("<br>" + "Age (parseInt) = " + ageInt + " , type : " + typeof ageInt);
+		 document.writeln("<br>" + "Age (parseFloat) = " + ageFloat + " , type : " + typeof ageFloat);
+		 document.writeln("<br>");
+
+		 //typeof age;
+		 //document.writeln(typeof age);
+		 document.writeln("<br>");
+		 document.writeln(age + 12);*/
+		 //document.writeln(age + 12 - 3);
+		 
+	     //var name = "A"
+         //document.writeln("<br><br>" + "ASCII code of " + name  + " = " + name.charCodeAt(0) + "<br>");
+/*var a=2;
+         var num ;
+         num+=a;
+         var age = "5";
+         document.writeln(typeof age);
+         document.writeln("<br>");
+         var anotherAge =+  age;//+ another way to convert string to number
+         document.writeln(anotherAge);
+         document.writeln(typeof anotherAge);
+         document.writeln(a);*/
+		
+	/*	var num = 5;
+		document.writeln("<br>" + "Num = " + num + " , type : " + typeof num);
+		var convertedNum = num.toString();
+		document.writeln("<br>" + "Converted Num = " + convertedNum + " , type : " + typeof convertedNum);
+		document.writeln("<br><br>");
+
+
+
+
+     */
+		
+
+
+		var doomsday = new Date("June 30, 2035 14:15:23");
+		document.write("dooms day = " + doomsday + "<br>");
+		doomsday.setFullYear("2045")
+		document.write("dooms day = " + doomsday + "<br>");
+		
+		var today = new Date();
+		var msToday = today.getTime();
+		var msDoomsday = doomsday.getTime();
+		
+		var msDiff = msDoomsday - msToday;
+		var dDiff = msDiff / (1000 * 60 * 60 * 24);
+		dDiff = Math.floor(dDiff);
+		
+		document.writeln(dDiff + " days are left!");
+
+      /*   var num = 5.4333333;
+         document.writeln("<br>" + "Num = " + num );
+         document.writeln("<br>" + "Num (fixed to 0 decimal places) = " + num.toFixed() );
+         document.writeln("<br>" + "Num (fixed to 2 decimal places) = " + num.toFixed(2) );
+         document.writeln("<br><br>");*/
+
+
+
+      /*   var currentDate = new Date();
+         alert(currentDate);
+         document.writeln("current date and time = " + currentDate + " , type : " + typeof currentDate);
+         document.writeln("<br>");
+         document.writeln("current date and time string = " + currentDate.toString() + " , type : " + typeof currentDate.toString());
+         document.writeln("<br>");
+         document.writeln("current day = " + currentDate.getDay());
+         document.writeln("<br>");
+         document.writeln("current date = " + currentDate.getDate());
+         document.writeln("<br>");
+         document.writeln("current month = " + currentDate.getMonth());
+         document.writeln("<br>");
+         document.writeln("current year = " + currentDate.getFullYear());
+         document.writeln("<br>");
+         document.writeln("current time = " + currentDate.getHours() + ":" +currentDate.getMinutes() + ":" +currentDate.getSeconds());
+         document.writeln("<br><br>");*/
+
+/*
+         var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+         var now = new Date();
+         var theDay = now.getDay();
+         var nameOfToday = dayNames[theDay];
+         document.write("day = " + theDay + "<br>");
+         document.write("name of the day = " + nameOfToday + "<br><br>");*/
+	</script>
+	</head>
+</body>
+</html>

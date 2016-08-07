@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+    <head>
+     <title>Home Page </title>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />  
+    </head>
+    <body>
+ <h1>ProfileBook <img src="/images/user-group-icon.png" class="icon"></h1><a href="/signup"><span><%= signup %></span></a><span>|</span><a href="/login"><span><%= login %></span></a>
+    
+    <ol>
+        <% for(var i=0; i<users.length; i++) {%>
+            <a href=<%= users[i].email %>><li><%= users[i].firstname %></li></a>
+        <% } %>
+    </ol>
+    
+    </body>
+ 
+</html>

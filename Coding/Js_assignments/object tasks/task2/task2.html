@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task2</title>
+    <script>
+        //Write a JavaScript program to delete the roll no property from the following object.
+       // Also print the object before or after deleting the property.
+        var student={
+            name:"parkash",
+               id:067,
+                class:"BSCSIV"
+        };
+        document.writeln("Object before deleting"+"<br>");
+        for(var key in student)
+        {
+            document.writeln(key+":"+student[key]+"<br>");
+        }
+        delete student.class;
+        document.writeln("<br><br><br>"+"Object after deleting"+"<br>");
+        for(var key in student)
+        {
+            document.writeln(key+":"+student[key]+"<br>");
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
